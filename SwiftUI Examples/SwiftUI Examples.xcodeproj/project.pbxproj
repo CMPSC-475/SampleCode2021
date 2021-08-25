@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BB3C34E26D69FFF00819FED /* TwisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3C34D26D69FFF00819FED /* TwisterView.swift */; };
 		3BF4D95026D558DB005900AB /* SwiftUI_ExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4D94F26D558DB005900AB /* SwiftUI_ExamplesApp.swift */; };
 		3BF4D95226D558DB005900AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4D95126D558DB005900AB /* ContentView.swift */; };
 		3BF4D95426D558DD005900AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4D95326D558DD005900AB /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BB3C34D26D69FFF00819FED /* TwisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwisterView.swift; sourceTree = "<group>"; };
 		3BF4D94C26D558DB005900AB /* SwiftUI Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF4D94F26D558DB005900AB /* SwiftUI_ExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ExamplesApp.swift; sourceTree = "<group>"; };
 		3BF4D95126D558DB005900AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF4D94F26D558DB005900AB /* SwiftUI_ExamplesApp.swift */,
+				3BB3C34D26D69FFF00819FED /* TwisterView.swift */,
 				3BF4D95126D558DB005900AB /* ContentView.swift */,
 				3BF4D95E26D55D70005900AB /* MainView.swift */,
 				3BF4D95326D558DD005900AB /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF4D95226D558DB005900AB /* ContentView.swift in Sources */,
+				3BB3C34E26D69FFF00819FED /* TwisterView.swift in Sources */,
 				3BF4D95F26D55D70005900AB /* MainView.swift in Sources */,
 				3BF4D95026D558DB005900AB /* SwiftUI_ExamplesApp.swift in Sources */,
 			);
