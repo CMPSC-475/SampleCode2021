@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //VStack {
+        VStack {
             HStack {
                 Circle()
                 Circle()
@@ -24,7 +24,7 @@ struct ContentView: View {
                 Text("Nittany Lion")
             }
             Rectangle()
-       // }
+        }
     }
 }
 
