@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct WeAreView: View {
+
     var body: some View {
         ZStack {
-            Color.orange
+            background
             VStack {
                 LionImage(title: "Mascot")
                 CheerText(cheer: "We Are")
@@ -19,7 +20,11 @@ struct WeAreView: View {
                 CheerButton(title: "Cheer")
             }
         }
+
     }
+    
+    let background : some View = Color.orange
+        .ignoresSafeArea()
 }
 
 

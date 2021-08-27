@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ViewConstants {
     static let textColor = Color.white
-
+    
     static let radius : CGFloat = 20
     static let paddingSize : CGFloat = 10
     static let strokeWidth : CGFloat = 2
