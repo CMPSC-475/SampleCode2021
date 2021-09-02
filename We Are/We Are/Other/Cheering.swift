@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Protocol used by the CheerManager View Model
 protocol Cheering {
     var mascotImageNames : (String,String,String) {get}
     var firstRoundCheers : (String,String) {get}
@@ -15,6 +16,8 @@ protocol Cheering {
     var secondRoundCount : Int {get}
 }
 
+
+// We'll initialize our CheerManager with an instance of this.
 struct PSUCheers :  Cheering {
     var mascotImageNames = ("Mascot0", "Mascot1", "Mascot1Reversed")
     var firstRoundCheers = ("We Are", "Penn State")
