@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CheerText: View {
+    @EnvironmentObject var cheerManager : CheerManager
     var cheer: String
+    var isVisible : Bool
     var body : some View {
         Text(cheer)
             .foregroundColor(.blue)
@@ -20,12 +22,14 @@ struct CheerText: View {
                             
                             .strokeBorder(Color.blue, lineWidth: ViewConstants.strokeWidth)
                             .background(Capsule().fill(Color.white)))
+            .opacity(isVisible ? 1.0 : 0.0)
         
     }
 }
 
 struct CheerText_Previews: PreviewProvider {
     static var previews: some View {
-        CheerText(cheer: "We Are")
+        CheerText(cheer: "We Are", isVisible: true)
+        .environmentObject(CheerManager())
     }
 }

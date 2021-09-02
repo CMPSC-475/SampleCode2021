@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LionImage: View {
-    var title: String
+    @EnvironmentObject var cheerManager : CheerManager
+    //var title: String
     var body : some View {
-        Image(title)
+        Image(cheerManager.cheerState.mascotImageName)
             .shadow(radius: 10)
             .padding()
     }
@@ -18,6 +19,7 @@ struct LionImage: View {
 
 struct LionImage_Previews: PreviewProvider {
     static var previews: some View {
-        LionImage(title:"Mascot")
+        LionImage()
+        .environmentObject(CheerManager())
     }
 }

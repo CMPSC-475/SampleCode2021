@@ -6,11 +6,17 @@
 //
 
 import Foundation
+
 struct CheerState {
     var mascotImageName :  String
     var cheer1 : String
     var cheer2 : String
     
+    var cheerCount = 0
+    
+    mutating func incrementCheerCount(modul modulus:Int) {
+        cheerCount = (cheerCount+1) % modulus
+    }
     mutating func changeMascotName(to name: String) {
         mascotImageName = name
     }

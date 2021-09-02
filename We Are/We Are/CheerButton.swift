@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct CheerButton: View {
+    @EnvironmentObject var cheerManager : CheerManager
     var title: String
     var body : some View {
-        Button(action: {})
+        Button(action: {cheerManager.doACheer()})
         {
             Text(title)
                 .font(.largeTitle)
@@ -29,5 +30,6 @@ struct CheerButton: View {
 struct CheerButton_Previews: PreviewProvider {
     static var previews: some View {
         CheerButton(title: "Cheer")
+        .environmentObject(CheerManager())
     }
 }
