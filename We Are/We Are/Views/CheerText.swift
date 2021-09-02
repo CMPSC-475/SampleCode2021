@@ -30,6 +30,6 @@ struct CheerText: View {
 struct CheerText_Previews: PreviewProvider {
     static var previews: some View {
         CheerText(cheer: "We Are", isVisible: true)
-        .environmentObject(CheerManager())
+        .environmentObject(CheerManager(cheering: PSUCheers()))
     }
 }

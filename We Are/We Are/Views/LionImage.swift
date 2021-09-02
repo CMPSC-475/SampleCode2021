@@ -20,6 +20,6 @@ struct LionImage: View {
 struct LionImage_Previews: PreviewProvider {
     static var previews: some View {
         LionImage()
-        .environmentObject(CheerManager())
+        .environmentObject(CheerManager(cheering: PSUCheers()))
     }
 }

@@ -70,17 +70,10 @@
 		3B8D564826D8029000720E06 /* We Are */ = {
 			isa = PBXGroup;
 			children = (
-				3B8D564926D8029000720E06 /* We_AreApp.swift */,
-				3B9F399A26D8502900034611 /* WeAreView.swift */,
-				3B8D565826DE9A6200720E06 /* CheerState.swift */,
-				3B8D565A26DE9BE000720E06 /* CheerManager.swift */,
-				3B36B44E26E13E67004AEC48 /* CheerConstants.swift */,
-				3B9F39A426D8581400034611 /* CheerText.swift */,
-				3B9F39A226D857FB00034611 /* CheerButton.swift */,
-				3B36B45026E13E9C004AEC48 /* Cheering.swift */,
-				3B9F39A026D857CC00034611 /* LionImage.swift */,
-				3B9F399C26D8557100034611 /* ViewConstants.swift */,
-				3B9F399E26D8567300034611 /* Color+Custom.swift */,
+				3BF86F6326E159F5008C2A20 /* Models */,
+				3BF86F6226E159EC008C2A20 /* View Models */,
+				3BF86F6126E159E6008C2A20 /* Views */,
+				3BF86F6426E15A02008C2A20 /* Other */,
 				3B8D564D26D8029400720E06 /* Assets.xcassets */,
 				3B8D565226D8029400720E06 /* Info.plist */,
 				3B8D564F26D8029400720E06 /* Preview Content */,
@@ -94,6 +87,45 @@
 				3B8D565026D8029400720E06 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BF86F6126E159E6008C2A20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F39A426D8581400034611 /* CheerText.swift */,
+				3B9F399A26D8502900034611 /* WeAreView.swift */,
+				3B9F39A226D857FB00034611 /* CheerButton.swift */,
+				3B9F39A026D857CC00034611 /* LionImage.swift */,
+				3B9F399C26D8557100034611 /* ViewConstants.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BF86F6226E159EC008C2A20 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B8D565A26DE9BE000720E06 /* CheerManager.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		3BF86F6326E159F5008C2A20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B8D565826DE9A6200720E06 /* CheerState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BF86F6426E15A02008C2A20 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3B36B45026E13E9C004AEC48 /* Cheering.swift */,
+				3B36B44E26E13E67004AEC48 /* CheerConstants.swift */,
+				3B9F399E26D8567300034611 /* Color+Custom.swift */,
+				3B8D564926D8029000720E06 /* We_AreApp.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

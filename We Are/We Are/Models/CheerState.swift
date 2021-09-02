@@ -14,7 +14,7 @@ struct CheerState {
     
     var cheerCount = 0
     
-    mutating func incrementCheerCount(modul modulus:Int) {
+    mutating func incrementCheerCount(modulo modulus:Int) {
         cheerCount = (cheerCount+1) % modulus
     }
     mutating func changeMascotName(to name: String) {

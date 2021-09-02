@@ -35,7 +35,7 @@ struct WeAreView: View {
 struct WeAreView_Previews: PreviewProvider {
     static var previews: some View {
         WeAreView()
-            .environmentObject(CheerManager())
+            .environmentObject(CheerManager(cheering: PSUCheers()))
         
     }
 }

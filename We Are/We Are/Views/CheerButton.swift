@@ -30,6 +30,6 @@ struct CheerButton: View {
 struct CheerButton_Previews: PreviewProvider {
     static var previews: some View {
         CheerButton(title: "Cheer")
-        .environmentObject(CheerManager())
+        .environmentObject(CheerManager(cheering: PSUCheers()))
     }
 }

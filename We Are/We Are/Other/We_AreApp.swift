@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct We_AreApp: App {
-    @StateObject var cheerManager = CheerManager()
+    @StateObject var cheerManager = CheerManager(cheering: PSUCheers())
     
     var body: some Scene {
         WindowGroup {
