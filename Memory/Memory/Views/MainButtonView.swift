@@ -15,7 +15,7 @@ struct MainButtonView: View {
     
     var body : some View {
         //TODO: add button action
-        Button(action: {/* action */}) {
+        Button(action: {memoryViewModel.advanceGameState()}) {
             ZStack {
                 Circle()
                     .scale(circleScaleFactor)

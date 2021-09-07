@@ -17,7 +17,7 @@ struct GuessButtonView : View {
         let gamePiece = GamePiece(background: .red, title: "A")
         //TODO: get game piece from view Model
         
-        return Button(action: {/* action */}) {
+        return Button(action: {memoryViewModel.nextGuess(guess: index)}) {
             GamePieceView(gamePiece: gamePiece, fontSize: labelFontSize)
         }
     }
