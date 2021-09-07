@@ -22,8 +22,7 @@ struct SequenceView: View {
             }
             Text("Memorize This Sequence")
                 .font(.title3)
-               //TODO: customize visibility of this text
-        }
+                .opacity(memoryManager.memorizeLabelVisible ? 1.0 : 0.0)        }
     }
 }
 

@@ -14,23 +14,28 @@ struct MemoryView: View {
     
     var body: some View {
         
-        VStack {
-            HStack {
-                GuessButtonView( index:0)
-                GuessButtonView(index:1)
+        ZStack {
+            Rectangle()
+                .fill(memoryManager.background)
+                .ignoresSafeArea()
+            VStack {
+                HStack {
+                    GuessButtonView( index:0)
+                    GuessButtonView(index:1)
+                }
+                HStack {
+                    GuessButtonView(index:2)
+                    GuessButtonView(index:3)
+                }
+                Spacer(minLength: 50)
+                SequenceView()
+                MainButtonView()
+                
+                
             }
-            HStack {
-                GuessButtonView(index:2)
-                GuessButtonView(index:3)
-            }
-            Spacer(minLength: 50)
-            SequenceView()
-            MainButtonView()
-            
-            
+            .padding()
+            .environmentObject(memoryManager)
         }
-        .padding()
-        .environmentObject(memoryManager)
         
     }
     

@@ -20,12 +20,11 @@ struct MainButtonView: View {
                 Circle()
                     .scale(circleScaleFactor)
                     .fill(Color.black)
-                //TODO: Add custom text from view model
-                Text("???").font(.system(size: self.buttonTextSize))
+                Text(memoryViewModel.mainButtonTitle).font(.system(size: self.buttonTextSize))
                     .foregroundColor(.white)
             }
         }
-        //TODO: Disable this button as needed
+        .disabled(memoryViewModel.shouldDisablePlayButton)
     }
 }
 

@@ -14,11 +14,11 @@ struct GuessButtonView : View {
     let labelFontSize : CGFloat = 100
     
     var body: some View {
-        let gamePiece = GamePiece(background: .red, title: "A")
-        //TODO: get game piece from view Model
+        let gamePiece = memoryViewModel.gamePieceFor(index: index)
         
         return Button(action: {memoryViewModel.nextGuess(guess: index)}) {
             GamePieceView(gamePiece: gamePiece, fontSize: labelFontSize)
+                .disabled(memoryViewModel.shouldDisableGuessButton)
         }
     }
     
