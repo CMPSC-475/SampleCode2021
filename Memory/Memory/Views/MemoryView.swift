@@ -11,7 +11,7 @@ import Combine
 
 struct MemoryView: View {
     @EnvironmentObject var memoryManager : MemoryManager
-    
+    @State private var showPreferences = false
     var body: some View {
         
         ZStack {
@@ -31,10 +31,18 @@ struct MemoryView: View {
                 SequenceView()
                 MainButtonView()
                 
+                HStack {
+                    Spacer()
+                    PreferenceButtonView(showPreferences: $showPreferences)
+                }
+                
                 
             }
             .padding()
             .environmentObject(memoryManager)
+            .sheet(isPresented: $showPreferences, content: {
+                PreferencesView(preferences: $memoryManager.memoryModel.preferences, showPreferences: $showPreferences)
+            })
         }
         
     }

@@ -18,8 +18,9 @@ struct GuessButtonView : View {
         
         return Button(action: {memoryViewModel.nextGuess(guess: index)}) {
             GamePieceView(gamePiece: gamePiece, fontSize: labelFontSize)
-                .disabled(memoryViewModel.shouldDisableGuessButton)
+                
         }
+        .disabled(memoryViewModel.shouldDisableGuessButton)
     }
     
 

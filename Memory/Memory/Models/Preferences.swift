@@ -10,7 +10,7 @@ import Foundation
 
 struct Preferences {
     var themeIndex : Int
-    var sequenceLength : Int
+    var sequenceLength : Int 
     
     static let standard = Preferences(themeIndex: 0, sequenceLength: 5)
 }

@@ -10,15 +10,24 @@ import SwiftUI
 
 struct PreferenceButtonView : View {
     @EnvironmentObject var memoryViewModel : MemoryManager
+    @Binding var showPreferences : Bool
     
+    let size : CGFloat = 25
     var body: some View {
         //TODO: Implement a button to present preferences
-        Text("Button")
+        Button(action: {showPreferences.toggle()}) {
+            Image(systemName: "gear")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width:size)
+                .foregroundColor(.black)
+                .padding()
+        }
     }
 }
 
 struct PreferenceButtonViewe_Previews: PreviewProvider {
     static var previews: some View {
-        PreferenceButtonView().environmentObject(MemoryManager())
+        PreferenceButtonView( showPreferences: .constant(true)).environmentObject(MemoryManager())
     }
 }

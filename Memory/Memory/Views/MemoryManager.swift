@@ -14,19 +14,9 @@ class MemoryManager :ObservableObject {
     //MARK: - Computed Properties -
     var shouldDisableGuessButton : Bool {memoryModel.gameState != .guessing}
     var shouldDisablePlayButton : Bool {memoryModel.gameState == .guessing}
-    var memorizeLabelVisible : Bool {memoryModel.gameState == .memorizing}
+    var shouldDisplayMemorizeText : Bool {memoryModel.gameState == .memorizing}
     
-    // how many dots are shown?  All of them if we're showing the user the initial sequence or if all guessed correctly.  Otherwise only ones they've guessed correctly so far
-    var visibleSequenceCount : Int  {
-        switch memoryModel.gameState {
-        case .memorizing, .won, .lost:
-            return memoryModel.sequence.count
-        case .guessing:
-            return memoryModel.currentGuessIndex
-        default:
-            return 0
-        }
-    }
+
     
     var background : Color {
         switch memoryModel.gameState {
@@ -73,10 +63,25 @@ class MemoryManager :ObservableObject {
         currentTheme[i]
     }
     
+    // how many dots are shown?  All of them if we're showing the user the initial sequence or if all guessed correctly.  Otherwise only ones they've guessed correctly so far
+    //TODO: Complete this
+    var visibleSequenceCount : Int  {
+        switch memoryModel.gameState {
+        case .guessing:
+            return memoryModel.currentGuessIndex
+        case .memorizing, .won, .lost:
+            return memoryModel.sequence.count
+        default:
+            return 0
+        }
+        
+    }
+    
     private var currentGuessIndex : Int {memoryModel.currentGuessIndex-1}
     // scale factor for sequence pieces - enlarge current guess
     func scaleForPieceAt(index i:Int) -> CGFloat {
-        i == currentGuessIndex ? 1.2 : 1
+        //TODO: Complete this
+        1
     }
     
     //MARK: - Intents -

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3FF86D26EA71D00043A03F /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FF86C26EA71D00043A03F /* PreferencesView.swift */; };
 		3B7075D926E66E75009F4E09 /* MemoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7075D826E66E75009F4E09 /* MemoryApp.swift */; };
 		3B7075DD26E66E78009F4E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7075DC26E66E78009F4E09 /* Assets.xcassets */; };
 		3B7075E026E66E78009F4E09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7075DF26E66E78009F4E09 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3FF86C26EA71D00043A03F /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		3B7075D526E66E75009F4E09 /* Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7075D826E66E75009F4E09 /* MemoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryApp.swift; sourceTree = "<group>"; };
 		3B7075DC26E66E78009F4E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				3B7075EB26E66EE3009F4E09 /* MemoryView.swift */,
 				3B7075F226E66EE4009F4E09 /* PreferenceButtonView.swift */,
 				3B7075EC26E66EE3009F4E09 /* SequenceView.swift */,
+				3B3FF86C26EA71D00043A03F /* PreferencesView.swift */,
 				3B7075F126E66EE4009F4E09 /* ViewConstants.swift */,
 			);
 			path = Views;
@@ -208,6 +211,7 @@
 				3B7075FF26E66F3B009F4E09 /* MemoryModel.swift in Sources */,
 				3B70760326E67179009F4E09 /* Preferences.swift in Sources */,
 				3B7075D926E66E75009F4E09 /* MemoryApp.swift in Sources */,
+				3B3FF86D26EA71D00043A03F /* PreferencesView.swift in Sources */,
 				3B70760526E67194009F4E09 /* GameConstants.swift in Sources */,
 				3B7075F726E66EE4009F4E09 /* GuessButtonView.swift in Sources */,
 				3B70760726E671AC009F4E09 /* Themes.swift in Sources */,
