@@ -14,6 +14,7 @@
 		3B2CC8DE26EE4DB400D9B74F /* USStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CC8DD26EE4DB400D9B74F /* USStateModel.swift */; };
 		3B2CC8E026EE4E1100D9B74F /* USState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CC8DF26EE4E1100D9B74F /* USState.swift */; };
 		3B2CC8E226EE4E4100D9B74F /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CC8E126EE4E4100D9B74F /* StateManager.swift */; };
+		3B3FF86F26EF7CBE0043A03F /* String+FirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FF86E26EF7CBE0043A03F /* String+FirstLetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3B2CC8DD26EE4DB400D9B74F /* USStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USStateModel.swift; sourceTree = "<group>"; };
 		3B2CC8DF26EE4E1100D9B74F /* USState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USState.swift; sourceTree = "<group>"; };
 		3B2CC8E126EE4E4100D9B74F /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		3B3FF86E26EF7CBE0043A03F /* String+FirstLetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FirstLetter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				3B2CC8DD26EE4DB400D9B74F /* USStateModel.swift */,
 				3B2CC8DF26EE4E1100D9B74F /* USState.swift */,
+				3B3FF86E26EF7CBE0043A03F /* String+FirstLetter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				3B2CC8DC26EE4D7B00D9B74F /* HomeView.swift in Sources */,
 				3B2CC8E026EE4E1100D9B74F /* USState.swift in Sources */,
 				3B2CC8DE26EE4DB400D9B74F /* USStateModel.swift in Sources */,
+				3B3FF86F26EF7CBE0043A03F /* String+FirstLetter.swift in Sources */,
 				3B2CC8E226EE4E4100D9B74F /* StateManager.swift in Sources */,
 				3B2CC8C926EE4D0F00D9B74F /* US_StatesApp.swift in Sources */,
 			);
