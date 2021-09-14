@@ -8,5 +8,12 @@
 import Foundation
 
 struct StateModel {
+    let manager : StorageManager
+    var states : [USState]
     
+    init() {
+        manager = StorageManager()
+        states = manager.states
+        
+    }
 }

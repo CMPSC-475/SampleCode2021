@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StateManager :ObservableObject {
+class StateManager : ObservableObject {
     @Published var stateModel = StateModel()
     
 }
