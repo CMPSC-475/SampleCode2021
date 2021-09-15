@@ -19,6 +19,8 @@
 		3B3FF87726F0CF4A0043A03F /* StateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FF87626F0CF4A0043A03F /* StateListView.swift */; };
 		3B7F1B5926F10EB20078073D /* StateData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5826F10EB20078073D /* StateData.json */; };
 		3B7F1B5B26F10ED80078073D /* StorageManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5A26F10ED80078073D /* StorageManger.swift */; };
+		3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */; };
+		3B7F1B5F26F221500078073D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5E26F221500078073D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3B3FF87626F0CF4A0043A03F /* StateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateListView.swift; sourceTree = "<group>"; };
 		3B7F1B5826F10EB20078073D /* StateData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StateData.json; sourceTree = "<group>"; };
 		3B7F1B5A26F10ED80078073D /* StorageManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManger.swift; sourceTree = "<group>"; };
+		3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "USState+Decodable.swift"; sourceTree = "<group>"; };
+		3B7F1B5E26F221500078073D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			children = (
 				3B2CC8DB26EE4D7B00D9B74F /* HomeView.swift */,
 				3B3FF87626F0CF4A0043A03F /* StateListView.swift */,
+				3B7F1B5E26F221500078073D /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				3B2CC8DD26EE4DB400D9B74F /* USStateModel.swift */,
 				3B2CC8DF26EE4E1100D9B74F /* USState.swift */,
 				3B7F1B5A26F10ED80078073D /* StorageManger.swift */,
+				3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */,
 				3B3FF87226EFBA250043A03F /* FileInfo.swift */,
 				3B7F1B5826F10EB20078073D /* StateData.json */,
 				3B3FF86E26EF7CBE0043A03F /* String+FirstLetter.swift */,
@@ -200,10 +206,12 @@
 				3B2CC8DE26EE4DB400D9B74F /* USStateModel.swift in Sources */,
 				3B3FF87326EFBA250043A03F /* FileInfo.swift in Sources */,
 				3B3FF86F26EF7CBE0043A03F /* String+FirstLetter.swift in Sources */,
+				3B7F1B5F26F221500078073D /* DetailView.swift in Sources */,
 				3B7F1B5B26F10ED80078073D /* StorageManger.swift in Sources */,
 				3B2CC8E226EE4E4100D9B74F /* StateManager.swift in Sources */,
 				3B3FF87726F0CF4A0043A03F /* StateListView.swift in Sources */,
 				3B2CC8C926EE4D0F00D9B74F /* US_StatesApp.swift in Sources */,
+				3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

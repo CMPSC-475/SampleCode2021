@@ -19,8 +19,9 @@ class StorageManager {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             states = try decoder.decode([USState].self, from: data)
-            
+
         } catch {
+            print(error)
             states = []
         }
     }
@@ -30,16 +31,21 @@ class StorageManager {
 /*
  } catch let DecodingError.dataCorrupted(context) {
      print(context)
+     states = []
  } catch let DecodingError.keyNotFound(key, context) {
      print("Key '\(key)' not found:", context.debugDescription)
      print("codingPath:", context.codingPath)
+     states = []
  } catch let DecodingError.valueNotFound(value, context) {
      print("Value '\(value)' not found:", context.debugDescription)
      print("codingPath:", context.codingPath)
+     states = []
  } catch let DecodingError.typeMismatch(type, context)  {
      print("Type '\(type)' mismatch:", context.debugDescription)
      print("codingPath:", context.codingPath)
+     states = []
  } catch {
      print("error: ", error)
+     states = []
  }
  */
