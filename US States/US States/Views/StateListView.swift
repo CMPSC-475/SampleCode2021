@@ -12,15 +12,21 @@ struct StateListView: View {
     
     var body: some View {
         NavigationView {
-        List {
-            ForEach(manager.stateModel.states.indices, id:\.self) {i in
-                StateRow(state: $manager.stateModel.states[i])
-
-                
-          
-                
+            List {
+                ForEach(manager.stateModel.states.indices, id:\.self) {i in
+                    NavigationLink(destination: DetailView(state: $manager.stateModel.states[i])) {
+                    StateRow(state: manager.stateModel.states[i])
+                    }
+                }
             }
-        }
+            .navigationTitle("US States")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {/* TODO: add an action */}, label: {
+                        Image(systemName: "highlighter")
+                    })
+                }
+            }
         }
     }
 }

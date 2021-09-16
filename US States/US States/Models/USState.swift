@@ -16,5 +16,5 @@ struct USState  : Identifiable, Decodable {
     var visited : Bool
     var id : String {name}
     
-    static let standard = USState(name: "Pennsyltucky", capital: "BoonieVille", info: "Welcome to Pennsyltucky", year: 1776, images: [], visited: false)
+    static let standard = USState(name: "Alaska", capital: "Juneau", info: "Seward's Ice Box", year: 1959, images: [], visited: false)
 }
