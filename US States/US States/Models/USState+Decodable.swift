@@ -8,6 +8,7 @@
 import Foundation
 
 extension USState  {
+    
     enum CodingKeys: String, CodingKey {
     case name = "state"
     case capital
@@ -18,10 +19,11 @@ extension USState  {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        state = try values.decode(String.self, forKey: .name)
+        name = try values.decode(String.self, forKey: .name)
         capital = try values.decode(String.self, forKey: .capital)
         info = try values.decode(String.self, forKey: .info)
-        year = try values.decode(Int.self, forKey: .year) 
+        year = try values.decode(Int.self, forKey: .year)
         images = try values.decode([String].self, forKey: .images)
+        visited = false
     }
 }

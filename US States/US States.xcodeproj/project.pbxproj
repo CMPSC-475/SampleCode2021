@@ -21,6 +21,7 @@
 		3B7F1B5B26F10ED80078073D /* StorageManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5A26F10ED80078073D /* StorageManger.swift */; };
 		3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */; };
 		3B7F1B5F26F221500078073D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5E26F221500078073D /* DetailView.swift */; };
+		3B7F1B7C26F3B17A0078073D /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B7B26F3B17A0078073D /* StateRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3B7F1B5A26F10ED80078073D /* StorageManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManger.swift; sourceTree = "<group>"; };
 		3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "USState+Decodable.swift"; sourceTree = "<group>"; };
 		3B7F1B5E26F221500078073D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3B7F1B7B26F3B17A0078073D /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				3B2CC8DB26EE4D7B00D9B74F /* HomeView.swift */,
 				3B3FF87626F0CF4A0043A03F /* StateListView.swift */,
+				3B7F1B7B26F3B17A0078073D /* StateRow.swift */,
 				3B7F1B5E26F221500078073D /* DetailView.swift */,
 			);
 			path = Views;
@@ -211,6 +214,7 @@
 				3B2CC8E226EE4E4100D9B74F /* StateManager.swift in Sources */,
 				3B3FF87726F0CF4A0043A03F /* StateListView.swift in Sources */,
 				3B2CC8C926EE4D0F00D9B74F /* US_StatesApp.swift in Sources */,
+				3B7F1B7C26F3B17A0078073D /* StateRow.swift in Sources */,
 				3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,17 @@ struct StateListView: View {
     @EnvironmentObject var manager : StateManager
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+        List {
+            ForEach(manager.stateModel.states.indices, id:\.self) {i in
+                StateRow(state: $manager.stateModel.states[i])
+
+                
+          
+                
+            }
+        }
+        }
     }
 }
 
