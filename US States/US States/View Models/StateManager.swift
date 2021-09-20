@@ -14,9 +14,11 @@ class StateManager : ObservableObject {
         String(format: "%04d", year)
     }
 
+    /*
     func sectionInfo(for sectioning:Sectioning) -> [SectionInfo] {
         return []
     }
+ */
     
     /*
     func sectionTitles(for property : (USState) -> String) -> [String] {
