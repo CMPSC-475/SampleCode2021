@@ -9,7 +9,9 @@
 import Foundation
 
 enum Sectioning: String, CaseIterable {
-    case none, byName, byDecade
+    case none = "None",
+         byName = "By Name",
+         byDecade = "By Decade"
 }
 
 struct SectionInfo : Identifiable {
