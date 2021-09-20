@@ -9,17 +9,31 @@
 import SwiftUI
 
 struct DetailView: View {
-    @EnvironmentObject var manager: StateManager
     @Binding var state : USState
     
     var body: some View {
         List {
             HStack {
                 Text("Visited")
+                Spacer()
                 Button(action: {state.visited.toggle()}, label: {
-                    Image(systemName: state.visited ? "star.fill" : "star")
+                    Image(systemName: state.visited ? "car.circle.fill" : "car.circle")
+                        .foregroundColor(Color.yellow)
                 })
             }
+            .padding()
+            
+            HStack {
+                Text("Favorite")
+                Spacer()
+                Button(action: {state.favorite.toggle()}, label: {
+                    Image(systemName: state.favorite ? "star.fill" : "star")
+                        .foregroundColor(Color.green)
+                })
+            }
+            .padding()
+            
+            
             Image(state.name)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -35,7 +49,8 @@ struct DetailView_Previews: PreviewProvider {
     
     static var previews: some View {
         DetailView(state: .constant(USState.standard))
-            .environmentObject(StateManager())
+
     }
 }
+
 

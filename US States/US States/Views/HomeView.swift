@@ -9,13 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var stateManager : StateManager
+    @State var showPreferences : Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                
+            }
+            .sheet(isPresented: $showPreferences) {
+                PreferenceView(showingPreferences: $showPreferences)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {showPreferences.toggle()}, label: {
+                        Image(systemName: "slider.horizontal.3")
+                    })
+                }
+            }
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(showPreferences: true)
     }
 }

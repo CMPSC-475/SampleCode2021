@@ -22,6 +22,10 @@
 		3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */; };
 		3B7F1B5F26F221500078073D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B5E26F221500078073D /* DetailView.swift */; };
 		3B7F1B7C26F3B17A0078073D /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F1B7B26F3B17A0078073D /* StateRow.swift */; };
+		3BCE736426F777E1002D27AD /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE736326F777E1002D27AD /* FeatureView.swift */; };
+		3BCE736626F779E1002D27AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE736526F779E1002D27AD /* Constants.swift */; };
+		3BCE736C26F77CA9002D27AD /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE736B26F77CA9002D27AD /* PreferenceView.swift */; };
+		3BCE736E26F8C4C6002D27AD /* Sectioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE736D26F8C4C6002D27AD /* Sectioning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		3B7F1B5C26F21ED00078073D /* USState+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "USState+Decodable.swift"; sourceTree = "<group>"; };
 		3B7F1B5E26F221500078073D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3B7F1B7B26F3B17A0078073D /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
+		3BCE736326F777E1002D27AD /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
+		3BCE736526F779E1002D27AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BCE736B26F77CA9002D27AD /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		3BCE736D26F8C4C6002D27AD /* Sectioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sectioning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2CC8C826EE4D0F00D9B74F /* US_StatesApp.swift */,
+				3BCE736526F779E1002D27AD /* Constants.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -106,8 +115,10 @@
 			children = (
 				3B2CC8DB26EE4D7B00D9B74F /* HomeView.swift */,
 				3B3FF87626F0CF4A0043A03F /* StateListView.swift */,
+				3BCE736B26F77CA9002D27AD /* PreferenceView.swift */,
 				3B7F1B7B26F3B17A0078073D /* StateRow.swift */,
 				3B7F1B5E26F221500078073D /* DetailView.swift */,
+				3BCE736326F777E1002D27AD /* FeatureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2CC8E126EE4E4100D9B74F /* StateManager.swift */,
+				3BCE736D26F8C4C6002D27AD /* Sectioning.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -206,15 +218,19 @@
 			files = (
 				3B2CC8DC26EE4D7B00D9B74F /* HomeView.swift in Sources */,
 				3B2CC8E026EE4E1100D9B74F /* USState.swift in Sources */,
+				3BCE736C26F77CA9002D27AD /* PreferenceView.swift in Sources */,
 				3B2CC8DE26EE4DB400D9B74F /* USStateModel.swift in Sources */,
 				3B3FF87326EFBA250043A03F /* FileInfo.swift in Sources */,
+				3BCE736426F777E1002D27AD /* FeatureView.swift in Sources */,
 				3B3FF86F26EF7CBE0043A03F /* String+FirstLetter.swift in Sources */,
 				3B7F1B5F26F221500078073D /* DetailView.swift in Sources */,
 				3B7F1B5B26F10ED80078073D /* StorageManger.swift in Sources */,
 				3B2CC8E226EE4E4100D9B74F /* StateManager.swift in Sources */,
 				3B3FF87726F0CF4A0043A03F /* StateListView.swift in Sources */,
 				3B2CC8C926EE4D0F00D9B74F /* US_StatesApp.swift in Sources */,
+				3BCE736626F779E1002D27AD /* Constants.swift in Sources */,
 				3B7F1B7C26F3B17A0078073D /* StateRow.swift in Sources */,
+				3BCE736E26F8C4C6002D27AD /* Sectioning.swift in Sources */,
 				3B7F1B5D26F21ED00078073D /* USState+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
