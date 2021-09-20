@@ -27,5 +27,5 @@ extension USState {
     var image : String { images.count > 0 ? images[0] : name }
     
     var centuryFounded: Int { year/100 + 1}
-    var decadeFounded : Int { year/10*10}
+    var decadeFounded : String { String(year/10*10)}
 }
