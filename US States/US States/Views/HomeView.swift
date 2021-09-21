@@ -9,14 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var stateManager : StateManager
-    @State var showPreferences : Bool
+    @State private var showPreferences : Bool = false
+    @AppStorage(Storage.sectioning) var sectioning : Sectioning = .none
+
     var body: some View {
         NavigationView {
             List {
-                
+                NavigationLink(destination: StateListView()) {
+                    Text("All States")
+                }
             }
             .sheet(isPresented: $showPreferences) {
-                PreferenceView(showingPreferences: $showPreferences)
+                PreferenceView(showingPreferences: $showPreferences, sectioning: $sectioning)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -31,6 +36,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(showPreferences: true)
+        HomeView()
     }
 }

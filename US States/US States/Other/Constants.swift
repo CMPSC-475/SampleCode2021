@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct AppStorage {
+struct Storage {
     static let homeStateIndex = "homeStateIndex"
     static let sectioning = "sectioning"
 }

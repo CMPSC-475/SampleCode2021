@@ -10,6 +10,7 @@ import SwiftUI
 struct PreferenceView: View {
     @EnvironmentObject var manager : StateManager
     @Binding var showingPreferences : Bool
+    @Binding var sectioning : Sectioning
     var body: some View {
         NavigationView {
             Form {
@@ -19,7 +20,11 @@ struct PreferenceView: View {
                 }
                 
                 Section(header: Text("List Sections")) {
-
+                    Picker("Choose Sectioning", selection: $sectioning) {
+                        ForEach(Sectioning.allCases, id:\.self) {section in
+                            Text(section.rawValue)
+                        }
+                    }
                 }
 
             }
@@ -36,7 +41,7 @@ struct PreferenceView: View {
 
 struct PreferenceView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferenceView( showingPreferences: .constant(true))
+        PreferenceView( showingPreferences: .constant(true), sectioning: .constant(.none))
             .environmentObject(StateManager())
     }
 }

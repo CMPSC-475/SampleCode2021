@@ -12,7 +12,7 @@ struct US_StatesApp: App {
     @StateObject var stateManager = StateManager() 
     var body: some Scene {
         WindowGroup {
-            StateListView()
+            HomeView() 
                 .environmentObject(stateManager)
         }
     }
