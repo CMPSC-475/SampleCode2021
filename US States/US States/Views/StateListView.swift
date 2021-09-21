@@ -34,5 +34,6 @@ struct StateListView: View {
 struct StateListView_Previews: PreviewProvider {
     static var previews: some View {
         StateListView()
+            .environmentObject(StateManager())
     }
 }
