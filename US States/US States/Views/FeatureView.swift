@@ -22,12 +22,7 @@ struct FeatureView: View {
                 Image(systemName: feature ? "\(symbol).fill" : symbol)
                     .foregroundColor(color)
             })
-        }
-
-//        Button(action: {feature.toggle()}) {
-//            Label(title, systemImage: feature ? "\(symbol).fill" : symbol)
-//            }
-        
+        }        
         .padding()
     }
 }

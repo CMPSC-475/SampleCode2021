@@ -9,8 +9,10 @@ import SwiftUI
 
 struct PreferenceView: View {
     @EnvironmentObject var manager : StateManager
+    @AppStorage(Storage.sectioning) var sectioning : Sectioning = .none
+
     @Binding var showingPreferences : Bool
-    @Binding var sectioning : Sectioning
+    
     var body: some View {
         NavigationView {
             Form {
@@ -41,7 +43,7 @@ struct PreferenceView: View {
 
 struct PreferenceView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferenceView( showingPreferences: .constant(true), sectioning: .constant(.none))
+        PreferenceView( showingPreferences: .constant(true))
             .environmentObject(StateManager())
     }
 }

@@ -20,7 +20,7 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showPreferences) {
-                PreferenceView(showingPreferences: $showPreferences, sectioning: $sectioning)
+                PreferenceView(showingPreferences: $showPreferences)
                 
             }
             .toolbar {
@@ -31,6 +31,7 @@ struct HomeView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

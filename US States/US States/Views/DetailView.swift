@@ -13,26 +13,12 @@ struct DetailView: View {
     
     var body: some View {
         List {
-            HStack {
-                Text("Visited")
-                Spacer()
-                Button(action: {state.visited.toggle()}, label: {
-                    Image(systemName: state.visited ? "car.circle.fill" : "car.circle")
-                        .foregroundColor(Color.yellow)
-                })
-            }
-            .padding()
-            
-            HStack {
-                Text("Favorite")
-                Spacer()
-                Button(action: {state.favorite.toggle()}, label: {
-                    Image(systemName: state.favorite ? "star.fill" : "star")
-                        .foregroundColor(Color.green)
-                })
-            }
-            .padding()
-            
+            Button(action: {state.favorite.toggle()}, label: {
+                Image(systemName: "star")
+                    .foregroundColor(.red)
+            })
+            FeatureView(title: "Visited", feature: $state.visited, symbol: Symbols.visitedSymbol, color: Symbols.visitedColor)
+            FeatureView(title: "Favorite", feature: $state.favorite, symbol: Symbols.favoriteSymbol, color: Symbols.favoriteColor)
             
             Image(state.name)
                 .resizable()
@@ -49,7 +35,7 @@ struct DetailView_Previews: PreviewProvider {
     
     static var previews: some View {
         DetailView(state: .constant(USState.standard))
-
+        
     }
 }
 
