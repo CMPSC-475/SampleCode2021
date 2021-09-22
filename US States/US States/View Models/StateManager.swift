@@ -41,14 +41,11 @@ class StateManager : ObservableObject {
         return []
     }
     
-    
-    
+
     func sectionTitles(for property : (USState) -> String) -> [String] {
         let titles = Set( stateModel.states.map(property))
         return titles.sorted()
     }
-    
-    
     
     
     func indices(for property : (USState) -> Bool) -> [Int] {
@@ -60,5 +57,24 @@ class StateManager : ObservableObject {
         return indices.sorted()
     }
     
+    /*
+    func sectionInfo(for keyPath: KeyPath<USState,String>) -> [SectionInfo] {
+        let titles = sectionTitles(for:{(s : USState) in s[keyPath:keyPath]})
+        let info = titles.map {t in SectionInfo(title: t, indicies: indices(for: {(s : USState) in s[keyPath:keyPath] == t}))}
+        return info
+    }
     
+    func sectionInfo(for sectioning:Sectioning) -> [SectionInfo] {
+        switch sectioning {
+        case .byName:
+            return sectionInfo(for: \.name.firstLetter!)
+            
+        case .byDecade:
+            return sectionInfo(for: \.decadeFounded)
+
+        case .none:
+            assert(false, "No section titles for .none option")
+        }
+    }
+     */
 }
