@@ -42,8 +42,8 @@ class StateManager : ObservableObject {
     }
     
 
-    func sectionTitles(for property : (USState) -> String) -> [String] {
-        let titles = Set( stateModel.states.map(property))
+    func sectionTitles(for sectionTitle : (USState) -> String) -> [String] {
+        let titles = Set( stateModel.states.map(sectionTitle))
         return titles.sorted()
     }
     
