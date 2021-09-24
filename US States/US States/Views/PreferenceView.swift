@@ -10,15 +10,24 @@ import SwiftUI
 struct PreferenceView: View {
     @EnvironmentObject var manager : StateManager
     @AppStorage(Storage.sectioning) var sectioning : Sectioning = .none
-
+    @AppStorage(Storage.homeStateIndex) var homeStateIndex : Int?
     @Binding var showingPreferences : Bool
+    
+    /*
+    @Environment(\.presentationMode) var presentationMode
+    */
     
     var body: some View {
         NavigationView {
             Form {
                 
                 Section(header: Text("Choose Home State")) {
-
+                    Picker("Choose Home State", selection: $homeStateIndex) {
+                        Text("None").tag(nil as Int?)
+                        ForEach(manager.stateModel.states.indices, id:\.self) {i in
+                            Text(manager.stateModel.states[i].name).tag(i as Int?)
+                        }
+                    }
                 }
                 
                 Section(header: Text("List Sections")) {
@@ -34,6 +43,7 @@ struct PreferenceView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {self.showingPreferences.toggle()}
                 }
+                //presentationMode.wrappedValue.dismiss()
             }
   
         }

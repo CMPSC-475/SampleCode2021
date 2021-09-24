@@ -11,10 +11,16 @@ struct HomeView: View {
     @EnvironmentObject var stateManager : StateManager
     @State private var showPreferences : Bool = false
     @AppStorage(Storage.sectioning) var sectioning : Sectioning = .none
-
+    @AppStorage(Storage.homeStateIndex) var homeStateIndex : Int?
+    
+    
     var body: some View {
         NavigationView {
             List {
+                
+                if let index = homeStateIndex {
+                Text("Home State: \(index)")
+                }
                 NavigationLink(destination: StateListView()) {
                     Text("All States")
                 }

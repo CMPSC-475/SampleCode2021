@@ -20,7 +20,7 @@ class StateManager : ObservableObject {
         String(format: "%04d", year)
     }
     
-    
+    /*
     func sectionInfo(for sectioning:Sectioning) -> [SectionInfo] {
         switch sectioning {
         case .byName:
@@ -35,19 +35,18 @@ class StateManager : ObservableObject {
                 SectionInfo(title: t, indicies: indices(for: {s in s.decadeFounded == t}))}
             return info
         default:
-            break
+            assert(false, "No section titles for .none option")
         }
-        
-        return []
     }
+ */
     
-
+    // array of section titles given a function that takes a state and generates its titlle
     func sectionTitles(for sectionTitle : (USState) -> String) -> [String] {
         let titles = Set( stateModel.states.map(sectionTitle))
         return titles.sorted()
     }
     
-    
+    // indices for all states satisfying the given property
     func indices(for property : (USState) -> Bool) -> [Int] {
         let filteredStates =  stateModel.states.filter(property)
         
@@ -57,7 +56,8 @@ class StateManager : ObservableObject {
         return indices.sorted()
     }
     
-    /*
+    
+    
     func sectionInfo(for keyPath: KeyPath<USState,String>) -> [SectionInfo] {
         let titles = sectionTitles(for:{(s : USState) in s[keyPath:keyPath]})
         let info = titles.map {t in SectionInfo(title: t, indicies: indices(for: {(s : USState) in s[keyPath:keyPath] == t}))}
@@ -76,5 +76,5 @@ class StateManager : ObservableObject {
             assert(false, "No section titles for .none option")
         }
     }
-     */
+     
 }

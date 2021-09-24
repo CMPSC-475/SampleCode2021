@@ -16,4 +16,8 @@ struct StateModel {
         states = manager.states
         
     }
+    
+    func save() {
+        manager.save(states: states)
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct USState  : Identifiable, Decodable {
+struct USState  : Identifiable, Decodable, Encodable {
     let name : String
     let capital : String
     let info : String
