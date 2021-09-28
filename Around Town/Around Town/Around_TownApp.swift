@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Around_TownApp: App {
+    @StateObject var manager = MapManager()
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(manager)
         }
     }
 }

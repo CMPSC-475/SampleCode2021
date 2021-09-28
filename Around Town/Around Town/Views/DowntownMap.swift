@@ -11,10 +11,13 @@ import MapKit
 
 struct DowntownMap: View {
     @EnvironmentObject var manager : MapManager
-
+    @State var spot : Spot?
     
     var body: some View {
-        Text("Map Here")
+        Map(coordinateRegion: $manager.region, annotationItems: manager.locationModel.favorites, annotationContent: annotationFor(spot:))
+            .actionSheet(item: $spot) { Spot in
+               [ Alert.Button.cancel()]
+            }
     }
 
 }
