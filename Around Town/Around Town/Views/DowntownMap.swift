@@ -22,6 +22,7 @@ struct DowntownMap: View {
                                 Alert.Button.default(Text("Directions"), action: {}),
                                 Alert.Button.destructive(Text("Delete"), action: {}),
                                 Alert.Button.cancel()])
+            
                
             }
     }
