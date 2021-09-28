@@ -11,7 +11,6 @@ import MapKit
 
 struct Place :  Identifiable, Equatable {
     let category : Category?
-    var highlighted = false
     var placeMark : MKPlacemark
     var phoneNumber : String
     var url : String
@@ -34,6 +33,15 @@ extension Place {
 
 // Custom Initializers
 extension Place {
+    init(mapItem:MKMapItem, category:Category?) {
+        self.category = category
+        self.placeMark = mapItem.placemark
+        self.phoneNumber = mapItem.phoneNumber ?? ""
+        self.url = mapItem.url?.description ?? ""
+    }
+    
+    
+    
     init(placeMark:MKPlacemark, category:Category?) {
         self.category = category
         self.placeMark = placeMark
@@ -41,12 +49,7 @@ extension Place {
         self.url = ""
     }
     
-    init(mapItem:MKMapItem, category:Category?) {
-        self.category = category
-        self.placeMark = mapItem.placemark
-        self.phoneNumber = mapItem.phoneNumber ?? ""
-        self.url = mapItem.url?.description ?? ""
-    }
+
     
     init(placeMark:MKPlacemark, category:Category?, name:String) {
 
