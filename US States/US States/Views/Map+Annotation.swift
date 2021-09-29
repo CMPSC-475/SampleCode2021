@@ -17,8 +17,10 @@ extension DowntownMap {
     
     func annotationFor(spot:Spot) -> some MapAnnotationProtocol {
         MapAnnotation(coordinate: spot.coordinate) {
-            Button(action: {self.spot = spot})
-                   {Image(systemName: "mappin")}
+            Button(action: {showingSpot = true; self.spot = spot})
+                   {Image(systemName: "mappin.circle")
+                           .scaleEffect(1.5)
+                   }
 //            NavigationLink(destination: SpotView(spot: spot)) {
 //                Image(systemName: "mappin")
 //
