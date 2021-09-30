@@ -27,4 +27,30 @@ extension DowntownMap {
 //            }
         }
     }
+    
+    func annotationFor(place:Place) -> some MapAnnotationProtocol {
+        MapAnnotation(coordinate: place.coordinate)  {
+            Image(manager.imageNameFor(category: place.category! ))
+                   
+//            NavigationLink(destination: SpotView(spot: spot)) {
+//                Image(systemName: "mappin")
+//
+//            }
+        }
+    }
+    
+    func menuFor(spot:Spot) -> some MapAnnotationProtocol {
+        MapAnnotation(coordinate: spot.coordinate) {
+                   Image(systemName: "mappin.circle")
+                           .scaleEffect(1.5)
+                           .contextMenu {
+                               Text((spot.title!))
+                               Button(action: {showDetails = true}) {
+                                   Label("Details", systemImage: "info")
+                               }
+                           }
+                   
+
+        }
+    }
 }

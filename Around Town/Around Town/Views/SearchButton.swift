@@ -10,7 +10,13 @@ import SwiftUI
 struct SearchButton: View {
     @EnvironmentObject var manager : MapManager
     var body: some View {
-        Text("Search Picker")
+        Picker(selection: $manager.selectedCategory, label: Image(systemName: "magnifyingglass")) {
+            Text("None").tag(nil as Category?)
+            ForEach(Category.allCases, id:\.self) { category in
+ 
+                Text(category.rawValue.capitalized).tag(category as Category?)
+            }
+        }
         
     }
 }

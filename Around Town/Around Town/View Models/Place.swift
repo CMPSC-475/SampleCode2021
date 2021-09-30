@@ -28,6 +28,7 @@ extension Place {
     var name : String {customName ?? placeMark.name ?? "No Name"}
     var thoroughfare : String? {self.placeMark.thoroughfare}
     var subThoroughfare : String? {self.placeMark.subThoroughfare}
+    var coordinate : CLLocationCoordinate2D {self.placeMark.coordinate}
 }
 
 
