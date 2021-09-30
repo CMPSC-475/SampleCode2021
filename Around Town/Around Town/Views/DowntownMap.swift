@@ -14,6 +14,9 @@ struct DowntownMap: View {
     @State var spot : Spot?  // for action sheet or confirmation dialog
     @State var showingSpot = false  // for showing confirmation dialog
     
+    @State var place : Place?  // for  confirmation dialog
+    @State var showingPlace = false  // for showing confirmation dialog
+    
     @State var showDetails = false
     
     var body: some View {
@@ -33,16 +36,15 @@ struct DowntownMap: View {
             //
             //            }
                 .confirmationDialog("Title",
-                                    isPresented: $showingSpot,
-                                    presenting: spot,
-                                    actions: { theSpot in
+                                    isPresented: $showingPlace,
+                                    presenting: place,
+                                    actions: { thePlace in
                     VStack {
-                        Button("Directions to \(theSpot.title ?? "Nowhere")") {}
-                        Button("Delete", role: .destructive) {}
-                        //Button("Cancel", role: .cancel) {}
+                        Button("Directions to \(thePlace.title)") {}
+                        Button("Delete", role: .destructive) {manager.delete(place: thePlace)}
                     }
-                }, message: { sp in
-                    Text(spot?.title ?? "No Title")
+                }, message: { place in
+                    Text(place.title)
                     
                 })
             

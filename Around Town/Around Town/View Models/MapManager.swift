@@ -23,6 +23,13 @@ class MapManager : ObservableObject {
         self.locationModel = locationModel
     }
     
+    //MARK: - Modifying Places -
+    func delete(place:Place) {
+        // firstIndex requires Place to conform to Equatable protocol
+        if let index = places.firstIndex(of: place) {
+            places.remove(at: index)
+        }
+    }
     
     
     //MARK: - Searching -

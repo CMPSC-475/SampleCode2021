@@ -21,21 +21,15 @@ extension DowntownMap {
                    {Image(systemName: "mappin.circle")
                            .scaleEffect(1.5)
                    }
-//            NavigationLink(destination: SpotView(spot: spot)) {
-//                Image(systemName: "mappin")
-//
-//            }
+
         }
     }
     
     func annotationFor(place:Place) -> some MapAnnotationProtocol {
         MapAnnotation(coordinate: place.coordinate)  {
-            Image(manager.imageNameFor(category: place.category! ))
+            Button(action: {showingPlace = true; self.place = place})
+            {Image(manager.imageNameFor(category: place.category! ))}
                    
-//            NavigationLink(destination: SpotView(spot: spot)) {
-//                Image(systemName: "mappin")
-//
-//            }
         }
     }
     
