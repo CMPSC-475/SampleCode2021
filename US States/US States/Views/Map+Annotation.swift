@@ -39,7 +39,7 @@ extension DowntownMap {
                            .scaleEffect(1.5)
                            .contextMenu {
                                Text((spot.title!))
-                               Button(action: {showDetails = true}) {
+                               Button(action: {showDetails = true; self.spot=spot}) {
                                    Label("Details", systemImage: "info")
                                }
                            }

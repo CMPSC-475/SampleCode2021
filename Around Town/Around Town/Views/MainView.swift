@@ -16,8 +16,10 @@ struct MainView: View {
         NavigationView {
          
             DowntownMap()
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     searchBarItem
+                    titleItem
                 }
         }
     }
@@ -26,6 +28,9 @@ struct MainView: View {
     // some local variables
     var searchBarItem = ToolbarItem(placement: .navigationBarTrailing) {
                             SearchButton()
+                        }
+    var titleItem = ToolbarItem(placement: .principal) {
+                            Text("Downtown")
                         }
 }
 
