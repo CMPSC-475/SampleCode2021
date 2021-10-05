@@ -12,9 +12,11 @@ import MapKit
 class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locationModel : LocationModel
     @Published var region : MKCoordinateRegion
-    
+    @Published var showsUserLocation = false
+
     let locationManager : CLLocationManager
     
+    var userTrackingMode :MKUserTrackingMode = .none
     let spanDelta = 0.01
     
     override init() {

@@ -15,10 +15,13 @@ extension MapManager {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
+            showsUserLocation = true
             locationManager.startUpdatingLocation()
+            userTrackingMode = .follow
         default:
             locationManager.stopUpdatingLocation()
-            
+            showsUserLocation = false
+            userTrackingMode = .none
         }
     }
     

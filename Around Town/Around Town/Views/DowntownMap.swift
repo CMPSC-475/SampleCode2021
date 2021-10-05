@@ -13,20 +13,18 @@ struct DowntownMap: View {
     @EnvironmentObject var manager : MapManager
     @State var spot : Spot?  // for action sheet or confirmation dialog
     @State var showingSpot = false  // for showing confirmation dialog
-    
     @State var place : Place?  // for  confirmation dialog
     @State var showingPlace = false  // for showing confirmation dialog
-    
     @State var showDetails = false
-    
     @State var userTrackingMode : MapUserTrackingMode = .follow
+
     
     var body: some View {
         VStack {
             
             NavigationLink(destination: SpotView(spot: $spot), isActive: $showDetails, label: {EmptyView()})
             
-            Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $userTrackingMode, annotationItems: manager.places, annotationContent: annotationFor(place:))
+            Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: manager.showsUserLocation, userTrackingMode: $userTrackingMode, annotationItems: manager.places, annotationContent: annotationFor(place:))
 //            Map(coordinateRegion: $manager.region, annotationItems: manager.places, annotationContent: annotationFor(place:))
             //            .actionSheet(item: $spot) { spot in
             //                ActionSheet(title: Text(spot.title ?? "No Title"),
