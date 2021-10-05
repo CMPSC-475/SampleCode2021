@@ -26,6 +26,6 @@ extension MapManager {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         
+        pins.append(contentsOf: locations.map {Pin(coordinate: $0.coordinate)})
     }
 }

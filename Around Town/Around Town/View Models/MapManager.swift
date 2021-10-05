@@ -8,12 +8,17 @@
 import Foundation
 import MapKit
 
+struct Pin : Identifiable {
+    var coordinate : CLLocationCoordinate2D
+    var id = UUID()
+}
 
 class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locationModel : LocationModel
     @Published var region : MKCoordinateRegion
     @Published var showsUserLocation = false
-
+    @Published var pins : [Pin] = []
+    
     let locationManager : CLLocationManager
     
     var userTrackingMode :MKUserTrackingMode = .none

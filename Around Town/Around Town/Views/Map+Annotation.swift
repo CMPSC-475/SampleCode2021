@@ -15,6 +15,10 @@ extension DowntownMap {
         MapPin(coordinate: spot.coordinate, tint: .blue)
     }
     
+    func pinFor(pin:Pin)-> some MapAnnotationProtocol {
+        MapPin(coordinate: pin.coordinate, tint: .blue)
+    }
+    
     func annotationFor(spot:Spot) -> some MapAnnotationProtocol {
         MapAnnotation(coordinate: spot.coordinate) {
             Button(action: {showingSpot = true; self.spot = spot})
