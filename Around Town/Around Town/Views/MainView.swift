@@ -20,6 +20,7 @@ struct MainView: View {
                 .toolbar {
                     searchBarItem
                     titleItem
+                    diningItem
                 }
         }
     }
@@ -32,6 +33,9 @@ struct MainView: View {
     var titleItem = ToolbarItem(placement: .principal) {
                             Text("Downtown")
                         }
+    var diningItem = ToolbarItem(placement: .navigationBarLeading) {
+        DiningPicker()
+    }
 }
 
 struct MainView_Previews: PreviewProvider {

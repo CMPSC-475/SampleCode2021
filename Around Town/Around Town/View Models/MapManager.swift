@@ -9,18 +9,30 @@ import Foundation
 import MapKit
 
 
-class MapManager : ObservableObject {
+class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locationModel : LocationModel
     @Published var region : MKCoordinateRegion
     
+    let locationManager : CLLocationManager
+    
     let spanDelta = 0.01
     
-    init() {
+    override init() {
+    
+        
         let locationModel = LocationModel()
         let center : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:  locationModel.centerCoord.latitude, longitude: locationModel.centerCoord.longitude)
         let span = MKCoordinateSpan(latitudeDelta: spanDelta, longitudeDelta: spanDelta)
         region = MKCoordinateRegion(center: center, span: span)
         self.locationModel = locationModel
+        
+        locationManager = CLLocationManager()
+        super.init()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        
+        
     }
     
     //MARK: - Modifying Places -
@@ -30,6 +42,14 @@ class MapManager : ObservableObject {
             places.remove(at: index)
         }
     }
+    
+    //MARK: - Restaurants -
+    // List of restaurant names & addresses read in from JSON file
+    let restaurants = Restaurant.restaurants
+    
+    // when user selects a restaurant we annotate map with it
+    var selectedRestaurantIndex : Int = 0
+    
     
     
     //MARK: - Searching -

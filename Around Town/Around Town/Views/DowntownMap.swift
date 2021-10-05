@@ -19,12 +19,15 @@ struct DowntownMap: View {
     
     @State var showDetails = false
     
+    @State var userTrackingMode : MapUserTrackingMode = .follow
+    
     var body: some View {
         VStack {
             
             NavigationLink(destination: SpotView(spot: $spot), isActive: $showDetails, label: {EmptyView()})
             
-            Map(coordinateRegion: $manager.region, annotationItems: manager.places, annotationContent: annotationFor(place:))
+            Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $userTrackingMode, annotationItems: manager.places, annotationContent: annotationFor(place:))
+//            Map(coordinateRegion: $manager.region, annotationItems: manager.places, annotationContent: annotationFor(place:))
             //            .actionSheet(item: $spot) { spot in
             //                ActionSheet(title: Text(spot.title ?? "No Title"),
             //                            message: Text(spot.subtitle ?? "No Subtitle"),
