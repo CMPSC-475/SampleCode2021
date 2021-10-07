@@ -24,7 +24,7 @@ struct DowntownMap: View {
             
             NavigationLink(destination: SpotView(spot: $spot), isActive: $showDetails, label: {EmptyView()})
             
-            Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: manager.showsUserLocation, userTrackingMode: $userTrackingMode, annotationItems: manager.pins , annotationContent: pinFor(pin:))
+            Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: manager.showsUserLocation, userTrackingMode: $userTrackingMode, annotationItems: manager.places , annotationContent: annotationFor(place:) )
 //            Map(coordinateRegion: $manager.region, annotationItems: manager.places, annotationContent: annotationFor(place:))
             //            .actionSheet(item: $spot) { spot in
             //                ActionSheet(title: Text(spot.title ?? "No Title"),
@@ -41,7 +41,7 @@ struct DowntownMap: View {
                                     presenting: place,
                                     actions: { thePlace in
                     VStack {
-                        Button("Directions to \(thePlace.title)") {}
+                        Button("Directions to \(thePlace.title)") {manager.provideDirections(for: thePlace)}
                         Button("Delete", role: .destructive) {manager.delete(place: thePlace)}
                     }
                 }, message: { place in

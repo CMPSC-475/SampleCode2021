@@ -55,9 +55,24 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     let restaurants = Restaurant.restaurants
     
     // when user selects a restaurant we annotate map with it
-    var selectedRestaurantIndex : Int = 0
+    var selectedRestaurantIndex : Int = 0 {
+        didSet {
+            geocode(for: restaurants[selectedRestaurantIndex])
+        }
+    }
     
-    
+    func geocode(for restaurant:Restaurant) {
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(restaurant.address) { placemarks, error in
+            guard (error == nil) else {return}
+            let placemark = placemarks!.first
+            let mapMark = MKPlacemark(placemark: placemark!)
+            let place = Place(placeMark: mapMark, category: .dining, name: restaurant.name)
+            self.places.removeAll()
+            self.places = [place]
+            self.region.center = mapMark.coordinate
+        }
+    }
     
     //MARK: - Searching -
     @Published var selectedCategory : Category? {
@@ -91,7 +106,26 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    func provideDirections(for place: Place) {
+        let request = MKDirections.Request()
+        request.source = MKMapItem.forCurrentLocation()
+        request.destination = MKMapItem(placemark: place.placeMark)
+        request.transportType = .walking
+        request.requestsAlternateRoutes = true
+        let directions = MKDirections(request: request)
+        
+        directions.calculate { response, error in
+            guard (error == nil) else {return}
+            
+            let route = response!.routes.first
+            
+        }
+        
+    }
+    
 }
+
+
 
 // define extension here to have support for CoreLocation
 extension Spot  {
