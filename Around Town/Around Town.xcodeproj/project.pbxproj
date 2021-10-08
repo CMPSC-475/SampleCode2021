@@ -24,7 +24,7 @@
 		3BCB01AF270CC54A009C837D /* SCWalk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3BCB01AE270CC54A009C837D /* SCWalk.gpx */; };
 		3BE27AA0270C899E00D982AA /* Restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BE27A9F270C899E00D982AA /* Restaurants.json */; };
 		3BE27AA2270C89A400D982AA /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE27AA1270C89A400D982AA /* Restaurant.swift */; };
-		3BE27AA4270C8A1800D982AA /* DiningPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE27AA3270C8A1800D982AA /* DiningPicker.swift */; };
+		3BE27AA4270C8A1800D982AA /* DiningMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE27AA3270C8A1800D982AA /* DiningMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 		3BCB01AE270CC54A009C837D /* SCWalk.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SCWalk.gpx; sourceTree = "<group>"; };
 		3BE27A9F270C899E00D982AA /* Restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Restaurants.json; sourceTree = "<group>"; };
 		3BE27AA1270C89A400D982AA /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		3BE27AA3270C8A1800D982AA /* DiningPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningPicker.swift; sourceTree = "<group>"; };
+		3BE27AA3270C8A1800D982AA /* DiningMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			children = (
 				3B684909270244E4008B935B /* MainView.swift */,
 				3B68490F27024521008B935B /* DowntownMap.swift */,
-				3BE27AA3270C8A1800D982AA /* DiningPicker.swift */,
+				3BE27AA3270C8A1800D982AA /* DiningMenu.swift */,
 				3BCB01AC270CC517009C837D /* Map+Annotation.swift */,
 				3B68490D2702450F008B935B /* SearchButton.swift */,
 				3B68490B270244F3008B935B /* SpotView.swift */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE27AA4270C8A1800D982AA /* DiningPicker.swift in Sources */,
+				3BE27AA4270C8A1800D982AA /* DiningMenu.swift in Sources */,
 				3BE27AA2270C89A400D982AA /* Restaurant.swift in Sources */,
 				3BCB01AA270CBBAB009C837D /* MapManager+CLLocation.swift in Sources */,
 				3B68490227024424008B935B /* MapManager.swift in Sources */,

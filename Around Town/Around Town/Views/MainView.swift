@@ -34,7 +34,7 @@ struct MainView: View {
                             Text("Downtown")
                         }
     var diningItem = ToolbarItem(placement: .navigationBarLeading) {
-        DiningPicker()
+        DiningMenu()
     }
 }
 
