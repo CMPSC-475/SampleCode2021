@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct TeamsListView: View {
+    @EnvironmentObject var playerModel : PlayersManager
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            ForEach(playerModel.teams) {team in
+                Section(header: TeamHeaderView(title: team.name)) {
+                    ForEach($playerModel.footballers) {$player in
+                        if player.team?.name == team.name {
+                        NavigationLink(destination: PlayerView(player: $player)) {
+                            PlayerRowView(player: player)
+                        }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+struct TeamHeaderView :View {
+    var title: String
+    var body: some View {
+        Text(title).font(Font.largeTitle)
     }
 }
 

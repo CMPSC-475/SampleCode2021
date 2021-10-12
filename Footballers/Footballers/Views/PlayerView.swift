@@ -17,6 +17,8 @@ struct PlayerView: View {
         VStack(spacing:30){
             Text(player.teamname)
             TextEditor(text: $player.info)
+               
+                .font(.title)
                 .padding(0)
                 .disabled(.inactive == self.editMode)
                 .padding()

@@ -7,43 +7,49 @@
 
 import Foundation
 
-class StorageManager {
-    var items : [Item]
-    let filename = "ItemData"
+class StorageManager<T : Codable>  {
+    
+    var modelData : [T]
+    let filename : String
     let fileInfo : FileInfo
     
-    init() {
+    init(filename:String) {
+        self.filename = filename
+        
         fileInfo = FileInfo(for: filename)
         
         if fileInfo.exists {
             let decoder = JSONDecoder()
             do {
                 let data = try Data(contentsOf: fileInfo.url)
-                items = try decoder.decode([Item].self, from: data)
+                modelData = try decoder.decode([T].self, from: data)
+                
             } catch {
                 print(error)
-                items = []
+                modelData = []
             }
             return
         }
         
         let bundle = Bundle.main
+        
+        // Forced unwrapping assumes bundle contains file
         let url = bundle.url(forResource: filename, withExtension: ".json")
         
-        guard let url = url else {items = []; return}
+        guard let url = url else {modelData = []; return}
         
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            items = try decoder.decode([Item].self, from: data)
+            modelData = try decoder.decode([T].self, from: data)
 
         } catch {
             print(error)
-            items = []
+            modelData = []
         }
     }
     
-    func save(states:[Item]) {
+    func save(states:[T]) {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(states)
@@ -52,6 +58,7 @@ class StorageManager {
             print(error)
         }
     }
+    
     
 }
 

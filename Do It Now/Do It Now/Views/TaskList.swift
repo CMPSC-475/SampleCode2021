@@ -15,9 +15,20 @@ struct TaskList: View {
                 ForEach($manager.items) {$item in
                     ItemRow(item: $item)
                 }
+                .onMove {indexSet, offset in
+                    manager.move(fromOffsets: indexSet, toOffset: offset)
+                }
+                .onDelete {indexSet in
+                    manager.delete(indexSet: indexSet)
+                }
             }
             .navigationTitle("Do It Now")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    EditButton()
+                }
+            }
         }
     }
 }

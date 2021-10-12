@@ -10,14 +10,14 @@ import Foundation
 
 class TaskManager :ObservableObject {
     let filename = "DoItNow"
-    let manager : StorageManager
+    let manager : StorageManager<Item>
     let formatter : DateFormatter
     
     @Published var items : [Item]
     
     init() {
-        manager = StorageManager()
-        items = manager.items
+        manager = StorageManager(filename: filename)
+        items = manager.modelData
         formatter = DateFormatter()
         formatter.dateStyle = .medium
         
@@ -26,6 +26,14 @@ class TaskManager :ObservableObject {
     
     func formatFor(date: Date) -> String {
         formatter.string(from: date)
+    }
+    
+    func delete(indexSet : IndexSet) {
+        let _ = items.remove(atOffsets: indexSet)
+    }
+    
+    func move(fromOffsets indexSet:IndexSet, toOffset index:Int) {
+        items.move(fromOffsets: indexSet, toOffset: index)
     }
 
 }

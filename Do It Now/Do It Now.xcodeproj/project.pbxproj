@@ -12,7 +12,7 @@
 		3BAEC650271472FE004DA2CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEC64F271472FE004DA2CC /* Preview Assets.xcassets */; };
 		3BAEC65A271473C5004DA2CC /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC659271473C5004DA2CC /* FileInfo.swift */; };
 		3BAEC65C271473CB004DA2CC /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC65B271473CB004DA2CC /* TaskManager.swift */; };
-		3BAEC65E271473D9004DA2CC /* StorageManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC65D271473D9004DA2CC /* StorageManger.swift */; };
+		3BAEC65E271473D9004DA2CC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC65D271473D9004DA2CC /* StorageManager.swift */; };
 		3BAEC660271473F9004DA2CC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC65F271473F9004DA2CC /* Item.swift */; };
 		3BAEC662271478EE004DA2CC /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC661271478EE004DA2CC /* TaskList.swift */; };
 		3BAEC664271479E0004DA2CC /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC663271479E0004DA2CC /* ItemRow.swift */; };
@@ -26,7 +26,7 @@
 		3BAEC64F271472FE004DA2CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BAEC659271473C5004DA2CC /* FileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		3BAEC65B271473CB004DA2CC /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		3BAEC65D271473D9004DA2CC /* StorageManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManger.swift; sourceTree = "<group>"; };
+		3BAEC65D271473D9004DA2CC /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3BAEC65F271473F9004DA2CC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3BAEC661271478EE004DA2CC /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		3BAEC663271479E0004DA2CC /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		3BAEC658271473BA004DA2CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3BAEC65D271473D9004DA2CC /* StorageManger.swift */,
+				3BAEC65D271473D9004DA2CC /* StorageManager.swift */,
 				3BAEC659271473C5004DA2CC /* FileInfo.swift */,
 				3BAEC65F271473F9004DA2CC /* Item.swift */,
 			);
@@ -184,7 +184,7 @@
 				3BAEC6662714AA31004DA2CC /* FinishButton.swift in Sources */,
 				3BAEC65C271473CB004DA2CC /* TaskManager.swift in Sources */,
 				3BAEC664271479E0004DA2CC /* ItemRow.swift in Sources */,
-				3BAEC65E271473D9004DA2CC /* StorageManger.swift in Sources */,
+				3BAEC65E271473D9004DA2CC /* StorageManager.swift in Sources */,
 				3BAEC660271473F9004DA2CC /* Item.swift in Sources */,
 				3BAEC649271472FC004DA2CC /* Do_It_NowApp.swift in Sources */,
 			);
