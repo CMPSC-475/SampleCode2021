@@ -32,6 +32,17 @@ class TaskManager :ObservableObject {
         let _ = items.remove(atOffsets: indexSet)
     }
     
+    func delete(item:Item){
+        if let index = items.firstIndex(where: {$0.id == item.id}) {
+            items.remove(at: index)
+        }
+    }
+    
+    func toggleDone(item:Item) {
+        if let index = items.firstIndex(where: {$0.id == item.id}) {
+            items[index].done.toggle()
+        }
+    }
     func deleteItems(itemIDS: Set<UUID>) {
 
         let offsets = Array(itemIDS).compactMap {id in items.firstIndex(where: {item in item.id == id})}

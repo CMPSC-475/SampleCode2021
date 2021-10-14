@@ -25,13 +25,22 @@ struct TaskList: View {
                     
                     ForEach($manager.items) {$item in
                         ItemRow(item: $item)
+                            .swipeActions(edge: .trailing) {
+                                Button(role: .destructive) {manager.delete(item: item)}
+                                label: {                     Label("Delete", systemImage: "trash.fill")      }
+                            }
+                            .swipeActions(edge: .leading) {
+                                Button(role: .none) {manager.toggleDone(item: item)}
+                                label: {                     Label("Done", systemImage: "checkmark")      }
+                                .tint(.blue)
+                            }
                     }
-                    .onMove {indexSet, offset in
-                        manager.move(fromOffsets: indexSet, toOffset: offset)
-                    }
-                    .onDelete {indexSet in
-                        manager.delete(indexSet: indexSet)
-                    }
+//                    .onMove {indexSet, offset in
+//                        manager.move(fromOffsets: indexSet, toOffset: offset)
+//                    }
+//                    .onDelete {indexSet in
+//                        manager.delete(indexSet: indexSet)
+//                    }
                 }
                 
             }
