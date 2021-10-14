@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PlayerView: View {
     @Binding var player : Player
-    //@Environment(\.editMode) var editMode
     @State var editMode : EditMode = .inactive
 
     
@@ -25,12 +24,14 @@ struct PlayerView: View {
         }
         .navigationTitle(Text(player.fullname))
         .navigationBarBackButtonHidden(editMode.isEditing)
+        
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 EditButton()
             }
         }
         .environment(\.editMode, $editMode)
+
         
     }
 }

@@ -7,13 +7,14 @@
 
 import Foundation
 typealias Players = [Player]
+typealias Teams = [Team]
 
 class PlayersManager : ObservableObject {
     let storageManager : StorageManager<Player>
     
     typealias Players = [Player]
     @Published var footballers : Players
-    @Published var teams : [Team]
+    @Published var teams : Teams
     
     init() {
         let _storageManager = StorageManager<Player>(name: "footballers")

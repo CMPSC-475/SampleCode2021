@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct TeamsListView: View {
-    @EnvironmentObject var playerModel : PlayersManager
+    @EnvironmentObject var manager : PlayersManager
 
     var body: some View {
         List{
-            ForEach(playerModel.teams) {team in
-                Section(header: TeamHeaderView(title: team.name)) {
-                    ForEach($playerModel.footballers) {$player in
-                        if player.team?.name == team.name {
-                        NavigationLink(destination: PlayerView(player: $player)) {
-                            PlayerRowView(player: player)
-                        }
-                        }
+            //TODO:  Create sections for each team. Each section contains all the players on the team roster
+            ForEach(manager.teams) {team in
+                Section {
+                    ForEach (team.roster) {player in
+                        PlayerRowView(player: player)
                     }
+                    
+                } header: {
+                    TeamHeaderView(title:team.name)
                 }
+                
+                    
+                
             }
-            
         }
     }
 }

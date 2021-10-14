@@ -12,16 +12,17 @@ extension PlayersManager {
     func teams(for footballers: [Player]) -> [Team] {
         
         var _teams = [Team]()
-        for p in footballers {
-            if let teamIndex = _teams.firstIndex(where: { (team) -> Bool in
-                team.name == p.teamname
-            }) {
-                _teams[teamIndex].addPlayer(p)
+
+        //TODO: create teams based on all the player's team name
+        for player in footballers {
+            if let team = _teams.first(where: {(t) -> Bool in t.name == player.teamname}) {
+                team.addPlayer(player)
             } else {
-                let newTeam = Team(name: p.teamname)
-                newTeam.addPlayer(p)
+                let newTeam = Team(name: player.teamname)
+                newTeam.addPlayer(player)
                 _teams.append(newTeam)
             }
+                
         }
         return  _teams
     }

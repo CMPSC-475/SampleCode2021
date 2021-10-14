@@ -15,11 +15,23 @@ struct AddView: View {
     
     var body: some View {
         TextField("Enter New Item", text: $text)
-  
-            .textFieldStyle(RoundedBorderTextFieldStyle())
- 
+            .onSubmit {
+                if isValid(text: text) {
+                    manager.addItem(title: text)
+                    dismiss()
+                } else {
+                    showAlert = true
+                }
+            }
+            .textFieldStyle(.roundedBorder)
+            .padding(20)
+           
+            .alert("Item cannot be empty", isPresented: $showAlert, actions: {})
     }
     
+    func isValid(text:String) -> Bool {
+        !text.isEmpty
+    }
 
 }
 

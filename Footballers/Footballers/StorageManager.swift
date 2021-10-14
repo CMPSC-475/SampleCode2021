@@ -17,10 +17,14 @@ class StorageManager<T:Codable> {
         fileInfo = FileInfo(for: filename)
         
         if fileInfo.exists {
-            let decoder = JSONDecoder()
+            //let decoder = JSONDecoder()
             do {
                 let data = try Data(contentsOf: fileInfo.url)
-                modelData = try decoder.decode([T].self, from: data)
+                let unarchiver = try NSKeyedUnarchiver(forReadingFrom: data)
+                
+                modelData = unarchiver.decodeDecodable([T].self, forKey: NSKeyedArchiveRootObjectKey) ?? []
+                
+//modelData = try decoder.decode([T].self, from: data)
             } catch {
                 print(error)
                 modelData = []
@@ -45,9 +49,13 @@ class StorageManager<T:Codable> {
     
     func save(modelData:[T]) {
         do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(modelData)
-            try data.write(to: fileInfo.url)
+            //let encoder = JSONEncoder()
+            let archiver = NSKeyedArchiver(requiringSecureCoding: true)
+            try archiver.encodeEncodable(modelData, forKey: NSKeyedArchiveRootObjectKey)
+            try archiver.encodedData.write(to: fileInfo.url)
+            
+            //let data = try encoder.encode(modelData)
+            //try data.write(to: fileInfo.url)
         } catch {
             print(error)
         }

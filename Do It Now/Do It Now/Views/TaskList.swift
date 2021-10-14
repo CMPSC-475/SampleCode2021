@@ -15,7 +15,10 @@ struct TaskList: View {
     
     var body: some View {
         NavigationView {
-            List {
+            List(selection: $indexSet) {
+                if isAdding {
+                    AddView()
+                }
                 ForEach($manager.items) {$item in
                     ItemRow(item: $item)
                 }
@@ -30,17 +33,17 @@ struct TaskList: View {
             .navigationBarTitleDisplayMode(.inline)
             
             
-            .sheet(isPresented: $isAdding,
-                   onDismiss: nil) {
-                AddView()
-            }
+//            .sheet(isPresented: $isAdding,
+//                   onDismiss: nil) {
+//                AddView()
+//            }
             
                    .toolbar {
                        ToolbarItem(placement: .primaryAction) {
                            EditButton()
                        }
-                       ToolbarItem(placement: .automatic) {
-                           Button(action:{isAdding = true}) {
+                       ToolbarItem(placement: .cancellationAction) {
+                           Button(action:{isAdding.toggle()}) {
                                Image(systemName: "plus.square")
                            }
                        }
