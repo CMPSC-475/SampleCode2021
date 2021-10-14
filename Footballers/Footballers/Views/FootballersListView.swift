@@ -10,12 +10,18 @@ import SwiftUI
 struct FootballersListView: View {
     @EnvironmentObject var manager : PlayersManager
     @State var showingAddPlayer : Bool = false
+    
+    @State private var searchText = ""
+    
+    
     var body: some View {
         List {
-
+            SearchBar(searchText: $searchText)
             ForEach($manager.footballers) {$player in
-                NavigationLink(destination: PlayerView(player: $player)) {
-                    PlayerRowView(player: player)
+                if manager.playerSatisfies(player: player, searchText: searchText) {
+                    NavigationLink(destination: PlayerView(player: $player)) {
+                        PlayerRowView(player: player)
+                    }
                 }
             }
         }
@@ -25,8 +31,8 @@ struct FootballersListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {showingAddPlayer.toggle()}) {Image(systemName: "plus")}
             }
-                
-            }
+            
+        }
         .sheet(isPresented: $showingAddPlayer) {
             AddPlayerView()
         }

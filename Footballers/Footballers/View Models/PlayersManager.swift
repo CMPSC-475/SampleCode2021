@@ -30,4 +30,18 @@ class PlayersManager : ObservableObject {
     func saveData() {
         storageManager.save(modelData: footballers)
     }
+    
+    //MARK: filtering
+    func playerSatisfies(player:Player, searchText:String) -> Bool {
+        player.lastname.hasPrefix(searchText)
+    }
+    
+    //Mark: - Edits
+    func addPlayer(player:Player) {
+        footballers.append(player)
+        if let team = teams.first(where: { (aTeam) -> Bool in
+            aTeam.name == player.teamname}) {
+            team.addPlayer(player)
+        }
+    }
 }

@@ -15,45 +15,54 @@ struct TaskList: View {
     
     var body: some View {
         NavigationView {
-            List(selection: $indexSet) {
+            VStack {
                 if isAdding {
-                    AddView()
+                    AddView(isAdding: $isAdding)
+                        .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
                 }
-                ForEach($manager.items) {$item in
-                    ItemRow(item: $item)
+                
+                List(selection: $indexSet) {
+                    
+                    ForEach($manager.items) {$item in
+                        ItemRow(item: $item)
+                    }
+                    .onMove {indexSet, offset in
+                        manager.move(fromOffsets: indexSet, toOffset: offset)
+                    }
+                    .onDelete {indexSet in
+                        manager.delete(indexSet: indexSet)
+                    }
                 }
-                .onMove {indexSet, offset in
-                    manager.move(fromOffsets: indexSet, toOffset: offset)
-                }
-                .onDelete {indexSet in
-                    manager.delete(indexSet: indexSet)
-                }
+                
             }
+
+            .animation(.easeInOut(duration: 2.0), value: isAdding)
+
             .navigationTitle("Do It Now")
             .navigationBarTitleDisplayMode(.inline)
             
             
-//            .sheet(isPresented: $isAdding,
-//                   onDismiss: nil) {
-//                AddView()
-//            }
+            //            .sheet(isPresented: $isAdding,
+            //                   onDismiss: nil) {
+            //                AddView()
+            //            }
             
-                   .toolbar {
-                       ToolbarItem(placement: .primaryAction) {
-                           EditButton()
-                       }
-                       ToolbarItem(placement: .cancellationAction) {
-                           Button(action:{isAdding.toggle()}) {
-                               Image(systemName: "plus.square")
-                           }
-                       }
-                       ToolbarItem(placement: .bottomBar) {
-                           Button(action: {manager.deleteItems(itemIDS: indexSet)}) {
-                               Image(systemName: "trash")
-                                   .disabled(indexSet.isEmpty)
-                           }
-                       }
-                   }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(action:{isAdding.toggle()}) {
+                        Image(systemName: "plus.square")
+                    }
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    Button(action: {manager.deleteItems(itemIDS: indexSet)}) {
+                        Image(systemName: "trash")
+                            .disabled(indexSet.isEmpty)
+                    }
+                }
+            }
         }
     }
 }

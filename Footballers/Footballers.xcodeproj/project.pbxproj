@@ -24,6 +24,7 @@
 		3BAEC69B2714BDF3004DA2CC /* PlayerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC69A2714BDF3004DA2CC /* PlayerRowView.swift */; };
 		3BAEC69D2714BFCA004DA2CC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC69C2714BFCA004DA2CC /* PlayerView.swift */; };
 		3BAEC69F2714C84D004DA2CC /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC69E2714C84D004DA2CC /* AddPlayerView.swift */; };
+		3BB553932718B35B00FC3D2D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB553922718B35B00FC3D2D /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3BAEC69A2714BDF3004DA2CC /* PlayerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowView.swift; sourceTree = "<group>"; };
 		3BAEC69C2714BFCA004DA2CC /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		3BAEC69E2714C84D004DA2CC /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
+		3BB553922718B35B00FC3D2D /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3BAEC6922714B9F8004DA2CC /* HomeView.swift */,
 				3BAEC6942714BB64004DA2CC /* HomeButton.swift */,
 				3BAEC6962714BC51004DA2CC /* FootballersListView.swift */,
+				3BB553922718B35B00FC3D2D /* SearchBar.swift */,
 				3BAEC69E2714C84D004DA2CC /* AddPlayerView.swift */,
 				3BAEC69C2714BFCA004DA2CC /* PlayerView.swift */,
 				3BAEC69A2714BDF3004DA2CC /* PlayerRowView.swift */,
@@ -203,6 +206,7 @@
 			files = (
 				3BAEC6892714B45C004DA2CC /* Team.swift in Sources */,
 				3BAEC69F2714C84D004DA2CC /* AddPlayerView.swift in Sources */,
+				3BB553932718B35B00FC3D2D /* SearchBar.swift in Sources */,
 				3BAEC6952714BB64004DA2CC /* HomeButton.swift in Sources */,
 				3BAEC69B2714BDF3004DA2CC /* PlayerRowView.swift in Sources */,
 				3BAEC6992714BC5A004DA2CC /* TeamsListView.swift in Sources */,
@@ -353,7 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +387,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

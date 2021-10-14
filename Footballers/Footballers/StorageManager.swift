@@ -24,7 +24,7 @@ class StorageManager<T:Codable> {
                 
                 modelData = unarchiver.decodeDecodable([T].self, forKey: NSKeyedArchiveRootObjectKey) ?? []
                 
-//modelData = try decoder.decode([T].self, from: data)
+                //modelData = try decoder.decode([T].self, from: data)
             } catch {
                 print(error)
                 modelData = []
