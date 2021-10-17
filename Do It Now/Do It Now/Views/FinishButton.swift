@@ -15,6 +15,7 @@ struct FinishButton: View {
         Button(action: {item.done.toggle()}) {
             Image(systemName: iconName )
         }
+        .foregroundColor(.accentColor)
     }
 }
 

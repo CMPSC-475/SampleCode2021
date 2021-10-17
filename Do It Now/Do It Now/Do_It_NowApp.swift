@@ -12,7 +12,7 @@ struct Do_It_NowApp: App {
     @StateObject var manager = TaskManager()
     var body: some Scene {
         WindowGroup {
-            TaskList()
+            MainView()
                 .environmentObject(manager)
         }
     }
