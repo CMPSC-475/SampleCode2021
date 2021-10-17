@@ -15,21 +15,34 @@ struct AddPlayerView: View {
     @State private var lastname : String = ""
     @State private var teamname : String = ""
     @State private var country : String = ""
+    
+    enum Field: Hashable {
+        case firstname, lastname, teamname, country
+    }
+    @FocusState private var focusedField: Field?
+    
     var body: some View {
         NavigationView {
             Form{
                 Section(header: Text("Enter Player Details")) {
-                TextField("First Name", text: $firstname)
-                TextField("Last Name", text: $lastname)
+                    TextField("First Name", text: $firstname)
+                        .focused($focusedField, equals: .firstname)
+                    
+                    TextField("Last Name", text: $lastname)
+                        .focused($focusedField, equals: .lastname)
+                    
                     Picker("Team", selection: $teamname) {
                         ForEach(manager.teams.map{$0.name}, id:\.self) {name in
                             Text(name)
                         }
                     }
-                //TextField("Team Name", text: $teamname)
-                TextField("Country", text: $country)
+                    .focused($focusedField, equals: .teamname)
+                    
+                    TextField("Country", text: $country)
+                        .focused($focusedField, equals: .country)
+                    
                 }
-
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -37,10 +50,22 @@ struct AddPlayerView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add") {
-                        let player = Player(firstname: firstname, lastname: lastname, team: teamname, country: country)
-                        self.manager.addPlayer(player: player)
-                        dismiss()}
-                        .disabled(!isValid)
+                        if firstname.isEmpty {
+                            focusedField = .firstname
+                        } else if lastname.isEmpty {
+                            focusedField = .lastname
+                        } else if teamname.isEmpty {
+                            focusedField = .teamname  // doesn't do anything.  Need more here
+                        } else if country.isEmpty {
+                            focusedField = .country
+                        } else {
+                            
+                            let player = Player(firstname: firstname, lastname: lastname, team: teamname, country: country)
+                            self.manager.addPlayer(player: player)
+                            dismiss()
+                            
+                        }
+                    }
                 }
             }
         }
