@@ -12,7 +12,7 @@ struct MOTaskList: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     
-    @State var indexSet : Set<UUID> = []
+    @State var indexSet : Set<ItemMO> = []
     @State var editMode : EditMode = .inactive
     
     @FetchRequest(
@@ -26,7 +26,7 @@ struct MOTaskList: View {
         List(selection: $indexSet) {
             
             ForEach(items) {item in
-                SwipeRow(item: item)
+                MOSwipeRow(item: item)
             }
         }
         
@@ -35,7 +35,7 @@ struct MOTaskList: View {
                 EditButton()
             }
             ToolbarItem(placement: .bottomBar) {
-                Button(action: {manager.deleteItems(itemIDS: indexSet)}) {
+                Button(action: {indexSet.forEach({viewContext.delete($0)})}) {
                     Image(systemName: "trash")
                 }
                 .disabled(indexSet.isEmpty)

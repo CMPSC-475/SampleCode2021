@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MOMainView: View {
     @EnvironmentObject var manager : TaskManager
-    @Environment(\.managedObjectContext) private var viewContext
 
     
     @State var isAdding = false
@@ -18,11 +17,11 @@ struct MOMainView: View {
         NavigationView {
             VStack {
                 if isAdding {
-                    AddView(isAdding: $isAdding)
+                    MOAddView(isAdding: $isAdding)
                         .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
                 }
                 
-                TaskList()
+                MOTaskList()
             }
 
             .animation(.easeInOut, value: isAdding)

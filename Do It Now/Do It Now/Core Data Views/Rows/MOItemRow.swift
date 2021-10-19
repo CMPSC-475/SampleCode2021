@@ -15,13 +15,13 @@ struct MOItemRow: View {
     var body: some View {
         HStack {
             VStack(alignment:.leading) {
-                Text(item.title)
+                Text(item.title ?? "No title")
                     .font(.system(size: fontSize))
-                Text(manager.formatFor(date: item.date))
+                Text(manager.formatFor(date: item.date ?? Date()))
                     .italic()
             }
             Spacer()
-            FinishButton(item: item)
+            MOFinishButton(item: item)
             
         }
     }

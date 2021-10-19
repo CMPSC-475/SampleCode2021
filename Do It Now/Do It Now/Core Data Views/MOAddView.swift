@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MOAddView: View {
     @EnvironmentObject var manager : TaskManager
+    @Environment(\.managedObjectContext) private var viewContext
+
     @Binding var isAdding : Bool
     @Environment(\.dismiss) var dismiss
     @State var text : String = ""
@@ -18,7 +21,10 @@ struct MOAddView: View {
         TextField("Enter New Item", text: $text)
             .onSubmit {
                 if isValid(text: text) {
-                    manager.addItem(title: text)
+                    let item = ItemMO(context:viewContext)
+                    item.title = text
+                    item.date = Date()
+                    item.done = false
                     dismiss()
                     isAdding = false
                 } else {
