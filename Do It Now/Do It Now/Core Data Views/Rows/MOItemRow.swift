@@ -10,7 +10,7 @@ import SwiftUI
 struct MOItemRow: View {
     @EnvironmentObject var manager : TaskManager
     
-    @Binding var item:Item
+    @ObservedObject var item:ItemMO
     let fontSize : CGFloat = 22
     var body: some View {
         HStack {
@@ -21,7 +21,7 @@ struct MOItemRow: View {
                     .italic()
             }
             Spacer()
-            FinishButton(item: $item)
+            FinishButton(item: item)
             
         }
     }

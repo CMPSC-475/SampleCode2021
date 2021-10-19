@@ -9,16 +9,16 @@ import SwiftUI
 
 struct MOSwipeRow: View {
     @EnvironmentObject var manager : TaskManager
-    @Binding var item : Item
+    @ObservedObject var item : ItemMO
     
     var body: some View {
-        ItemRow(item: $item)
+        ItemRow(item: item)
             .swipeActions(edge: .trailing) {
-                Button(role: .destructive) {manager.delete(item: item)}
+                Button(role: .destructive) {}
             label: {                     Label("Delete", systemImage: "trash.fill")      }
             }
             .swipeActions(edge: .leading) {
-                Button(role: .none) {manager.toggleDone(item: item)}
+                Button(role: .none) {item.done.toggle())}
             label: {                     Label("Done", systemImage: "checkmark")      }
             .tint(.blue)
             }

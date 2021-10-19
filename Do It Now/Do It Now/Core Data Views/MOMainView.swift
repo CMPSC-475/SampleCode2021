@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MOMainView: View {
     @EnvironmentObject var manager : TaskManager
+    @Environment(\.managedObjectContext) private var viewContext
+
+    
     @State var isAdding = false
     
     var body: some View {

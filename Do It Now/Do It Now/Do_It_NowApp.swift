@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct Do_It_NowApp: App {
+    let persistenceController = PersistenceController.shared
+
     @StateObject var manager = TaskManager()
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MOMainView()
                 .environmentObject(manager)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
