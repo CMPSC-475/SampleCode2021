@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MOMainView: View {
-    @EnvironmentObject var manager : TaskManager
+    //@EnvironmentObject var manager : TaskManager
 
     
     @State var isAdding = false

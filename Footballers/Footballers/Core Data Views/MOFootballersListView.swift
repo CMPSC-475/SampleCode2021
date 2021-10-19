@@ -9,18 +9,24 @@ import SwiftUI
 
 struct MOFootballersListView: View {
     @EnvironmentObject var manager : PlayersManager
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @State var showingAddPlayer : Bool = false
     
     @State private var searchText = ""
     
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Player.lastname, ascending: true)],
+        animation: .default)
+    private var footballers: FetchedResults<PlayerMO>
     
     var body: some View {
         List {
             SearchBar(searchText: $searchText)
-            ForEach($manager.footballers) {$player in
+            ForEach(footballers) {player in
                 if manager.playerSatisfies(player: player, searchText: searchText) {
-                    NavigationLink(destination: PlayerView(player: $player)) {
-                        PlayerRowView(player: player)
+                    NavigationLink(destination: MOPlayerView(player: player)) {
+                        MOPlayerRowView(player: player)
                     }
                 }
             }

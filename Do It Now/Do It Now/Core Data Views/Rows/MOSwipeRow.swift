@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MOSwipeRow: View {
-    @EnvironmentObject var manager : TaskManager
+    //@EnvironmentObject var manager : TaskManager
     @Environment(\.managedObjectContext) private var viewContext
 
     

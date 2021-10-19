@@ -9,13 +9,15 @@ import SwiftUI
 
 @main
 struct FootballersApp: App {
+    let persistenceController = PersistenceController.shared
     @StateObject var manager = PlayersManager()
     
     @Environment(\.scenePhase) private var scenePhase
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MOHomeView()
                 .environmentObject(manager)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .onChange(of: scenePhase) {phase in
             switch phase {

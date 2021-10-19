@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B341286271F55D200971EFD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B341285271F55D200971EFD /* Persistence.swift */; };
+		3B341289271F55ED00971EFD /* Footballers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B341287271F55ED00971EFD /* Footballers.xcdatamodeld */; };
 		3BAEC6742714B37B004DA2CC /* FootballersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC6732714B37B004DA2CC /* FootballersApp.swift */; };
 		3BAEC6782714B37E004DA2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEC6772714B37E004DA2CC /* Assets.xcassets */; };
 		3BAEC67B2714B37E004DA2CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEC67A2714B37E004DA2CC /* Preview Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B341285271F55D200971EFD /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3B341288271F55ED00971EFD /* Footballers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footballers.xcdatamodel; sourceTree = "<group>"; };
 		3BAEC6702714B37B004DA2CC /* Footballers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footballers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAEC6732714B37B004DA2CC /* FootballersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballersApp.swift; sourceTree = "<group>"; };
 		3BAEC6772714B37E004DA2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				3BAEC68C2714B4B3004DA2CC /* StorageManager.swift */,
 				3BAEC68E2714B4F4004DA2CC /* FileInfo.swift */,
 				3BAEC68A2714B480004DA2CC /* footballers.json */,
+				3B341287271F55ED00971EFD /* Footballers.xcdatamodeld */,
+				3B341285271F55D200971EFD /* Persistence.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				3BAEC6852714B415004DA2CC /* PlayersManager.swift in Sources */,
 				3BAEC6972714BC51004DA2CC /* FootballersListView.swift in Sources */,
 				3BAEC69D2714BFCA004DA2CC /* PlayerView.swift in Sources */,
+				3B341286271F55D200971EFD /* Persistence.swift in Sources */,
 				3BB95528271F0B5B00088F0A /* MOTeamListView.swift in Sources */,
 				3BB95524271F0B2900088F0A /* MOPlayerView.swift in Sources */,
 				3BB95526271F0B4500088F0A /* MOPlayerRowView.swift in Sources */,
@@ -248,6 +255,7 @@
 				3BB9551E271F0AC000088F0A /* MOHomeView.swift in Sources */,
 				3BB95520271F0AE800088F0A /* MOFootballersListView.swift in Sources */,
 				3BAEC68F2714B4F4004DA2CC /* FileInfo.swift in Sources */,
+				3B341289271F55ED00971EFD /* Footballers.xcdatamodeld in Sources */,
 				3BAEC6932714B9F8004DA2CC /* HomeView.swift in Sources */,
 				3BAEC68D2714B4B3004DA2CC /* StorageManager.swift in Sources */,
 				3BAEC6742714B37B004DA2CC /* FootballersApp.swift in Sources */,
@@ -455,6 +463,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B341287271F55ED00971EFD /* Footballers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B341288271F55ED00971EFD /* Footballers.xcdatamodel */,
+			);
+			currentVersion = 3B341288271F55ED00971EFD /* Footballers.xcdatamodel */;
+			path = Footballers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3BAEC6682714B37B004DA2CC /* Project object */;
 }

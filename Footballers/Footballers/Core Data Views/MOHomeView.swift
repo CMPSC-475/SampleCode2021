@@ -12,10 +12,10 @@ struct MOHomeView: View {
     var body: some View {
         NavigationView {
         VStack(spacing:60) {
-            NavigationLink(destination: FootballersListView()) {
+            NavigationLink(destination: MOFootballersListView()) {
                 HomeButton(title: "Players")
             }
-            NavigationLink(destination: TeamsListView())  {
+            NavigationLink(destination: MOTeamListView())  {
                 HomeButton(title: "Teams")
             }
         }.accentColor(Color.black)

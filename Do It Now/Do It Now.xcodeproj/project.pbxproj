@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B0B510C271F33B700810BCB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0B510B271F33B700810BCB /* Persistence.swift */; };
 		3B0B510F271F33D300810BCB /* DoItNow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B0B510D271F33D300810BCB /* DoItNow.xcdatamodeld */; };
 		3B341273271C5BA800971EFD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B341272271C5BA800971EFD /* MainView.swift */; };
 		3B341275271C5D4900971EFD /* SwipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B341274271C5D4900971EFD /* SwipeRow.swift */; };
@@ -17,6 +16,7 @@
 		3B341280271C719800971EFD /* MOSwipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34127F271C719800971EFD /* MOSwipeRow.swift */; };
 		3B341282271C71AA00971EFD /* MOItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B341281271C71AA00971EFD /* MOItemRow.swift */; };
 		3B341284271C71B100971EFD /* MOFinishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B341283271C71B100971EFD /* MOFinishButton.swift */; };
+		3B34128B271F577E00971EFD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34128A271F577E00971EFD /* Persistence.swift */; };
 		3BAEC649271472FC004DA2CC /* Do_It_NowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEC648271472FC004DA2CC /* Do_It_NowApp.swift */; };
 		3BAEC64D271472FE004DA2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEC64C271472FE004DA2CC /* Assets.xcassets */; };
 		3BAEC650271472FE004DA2CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEC64F271472FE004DA2CC /* Preview Assets.xcassets */; };
@@ -31,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B0B510B271F33B700810BCB /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3B0B510E271F33D300810BCB /* DoItNow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoItNow.xcdatamodel; sourceTree = "<group>"; };
 		3B341272271C5BA800971EFD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3B341274271C5D4900971EFD /* SwipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRow.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		3B34127F271C719800971EFD /* MOSwipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOSwipeRow.swift; sourceTree = "<group>"; };
 		3B341281271C71AA00971EFD /* MOItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOItemRow.swift; sourceTree = "<group>"; };
 		3B341283271C71B100971EFD /* MOFinishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOFinishButton.swift; sourceTree = "<group>"; };
+		3B34128A271F577E00971EFD /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3BAEC645271472FC004DA2CC /* Do It Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Do It Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAEC648271472FC004DA2CC /* Do_It_NowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do_It_NowApp.swift; sourceTree = "<group>"; };
 		3BAEC64C271472FE004DA2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +95,15 @@
 				3B341283271C71B100971EFD /* MOFinishButton.swift */,
 			);
 			path = Rows;
+			sourceTree = "<group>";
+		};
+		3B34128C271F578400971EFD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B0B510D271F33D300810BCB /* DoItNow.xcdatamodeld */,
+				3B34128A271F577E00971EFD /* Persistence.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		3BAEC63C271472FC004DA2CC = {
@@ -157,11 +166,10 @@
 		3BAEC658271473BA004DA2CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B0B510D271F33D300810BCB /* DoItNow.xcdatamodeld */,
+				3B34128C271F578400971EFD /* Core Data */,
 				3BAEC65D271473D9004DA2CC /* StorageManager.swift */,
 				3BAEC659271473C5004DA2CC /* FileInfo.swift */,
 				3BAEC65F271473F9004DA2CC /* Item.swift */,
-				3B0B510B271F33B700810BCB /* Persistence.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,9 +252,9 @@
 				3B341284271C71B100971EFD /* MOFinishButton.swift in Sources */,
 				3BC528FB2717108F00BB26E2 /* AddView.swift in Sources */,
 				3B341273271C5BA800971EFD /* MainView.swift in Sources */,
+				3B34128B271F577E00971EFD /* Persistence.swift in Sources */,
 				3BAEC6662714AA31004DA2CC /* FinishButton.swift in Sources */,
 				3BAEC65C271473CB004DA2CC /* TaskManager.swift in Sources */,
-				3B0B510C271F33B700810BCB /* Persistence.swift in Sources */,
 				3B34127D271C718200971EFD /* MOAddView.swift in Sources */,
 				3B341280271C719800971EFD /* MOSwipeRow.swift in Sources */,
 				3BAEC664271479E0004DA2CC /* ItemRow.swift in Sources */,

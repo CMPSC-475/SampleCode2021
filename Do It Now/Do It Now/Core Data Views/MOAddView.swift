@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct MOAddView: View {
-    @EnvironmentObject var manager : TaskManager
+    //@EnvironmentObject var manager : TaskManager
     @Environment(\.managedObjectContext) private var viewContext
 
     @Binding var isAdding : Bool
