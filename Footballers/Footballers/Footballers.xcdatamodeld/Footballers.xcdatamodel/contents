@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="PlayerMO" representedClassName="PlayerMO" syncable="YES" codeGenerationType="class">
+    <entity name="PlayerMO" representedClassName="PlayerMO" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="firstname" optional="YES" attributeType="String"/>
         <attribute name="info" optional="YES" attributeType="String"/>
@@ -9,12 +9,12 @@
         <attribute name="rank" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamMO" inverseName="roster" inverseEntity="TeamMO"/>
     </entity>
-    <entity name="TeamMO" representedClassName="TeamMO" syncable="YES" codeGenerationType="class">
+    <entity name="TeamMO" representedClassName="TeamMO" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="roster" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayerMO" inverseName="team" inverseEntity="PlayerMO"/>
     </entity>
     <elements>
-        <element name="PlayerMO" positionX="-11.31640625" positionY="43.640625" width="128" height="58"/>
-        <element name="TeamMO" positionX="-386.703125" positionY="-2.93359375" width="128" height="73"/>
+        <element name="PlayerMO" positionX="-57.4044189453125" positionY="101.7104187011719" width="128" height="28"/>
+        <element name="TeamMO" positionX="-259.4521484375" positionY="296.7101745605469" width="128" height="28"/>
     </elements>
 </model>

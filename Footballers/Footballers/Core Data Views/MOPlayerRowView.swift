@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MOPlayerRowView: View {
-    let player : Player
+    let player : PlayerMO
     var body: some View {
-        VStack {
+        VStack(alignment:.leading) {
         Text(player.fullname)
-        Text(player.teamname).italic()
+            Text(player.team.name).italic()
         }
     }
 }

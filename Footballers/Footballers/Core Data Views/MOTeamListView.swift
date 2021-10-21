@@ -12,7 +12,7 @@ struct MOTeamListView: View {
 
     var body: some View {
         List{
-            //TODO:  Create sections for each team. Each section contains all the players on the team roster
+
             ForEach(manager.teams) {team in
                 Section {
                     ForEach (team.roster) {player in

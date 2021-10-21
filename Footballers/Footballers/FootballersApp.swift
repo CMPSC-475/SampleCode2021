@@ -23,6 +23,7 @@ struct FootballersApp: App {
             switch phase {
             case .inactive:
                 manager.saveData()
+                try? persistenceController.container.viewContext.save()
             default:
                 break
             }

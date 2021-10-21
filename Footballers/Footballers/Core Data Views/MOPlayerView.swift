@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MOPlayerView: View {
-    @Binding var player : Player
+    @ObservedObject var player : PlayerMO
     @State var editMode : EditMode = .inactive
 
     
     var body: some View {
         VStack(spacing:30){
-            Text(player.teamname)
+            Text(player.team.name)
             TextEditor(text: $player.info)
                
                 .font(.title)
@@ -23,6 +23,7 @@ struct MOPlayerView: View {
                 .padding()
         }
         .navigationTitle(Text(player.fullname))
+        
         .navigationBarBackButtonHidden(editMode.isEditing)
         
         .toolbar {
