@@ -44,4 +44,8 @@ class PlayersManager : ObservableObject {
             team.addPlayer(player)
         }
     }
+    
 }
+
+
+
