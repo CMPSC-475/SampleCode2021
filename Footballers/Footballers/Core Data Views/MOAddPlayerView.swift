@@ -9,6 +9,11 @@ import SwiftUI
 
 struct MOAddPlayerView: View {
     @EnvironmentObject var manager : PlayersManager
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \TeamMO.name, ascending: true)],
+                      animation: .default)
+        private var teams: FetchedResults<TeamMO>
+    
     @Environment(\.dismiss) var dismiss
     
     @State private var firstname : String = ""
@@ -61,7 +66,8 @@ struct MOAddPlayerView: View {
                         } else {
                             
                             let player = Player(firstname: firstname, lastname: lastname, team: teamname, country: country)
-                            self.manager.addPlayer(player: player)
+                            //self.manager.addPlayer(player: player)
+                            addPlayer(player: player)
                             dismiss()
                             
                         }
@@ -70,9 +76,26 @@ struct MOAddPlayerView: View {
             }
         }
     }
-    
+        func addPlayer(player:Player) {
+            let newPlayer = PlayerMO(context: viewContext)
+            newPlayer.firstname = player.firstname
+            newPlayer.lastname = player.lastname
+            newPlayer.country = player.country
+            newPlayer.info = player.info
+            if let team = teams.first(where: { (teamMO) -> Bool  in
+                                        teamMO.name == player.teamname}) {
+                newPlayer.team = team
+            } else {  // new team
+                let newTeam = TeamMO(context: viewContext)
+                newTeam.name = player.teamname
+                newTeam.addToRoster(newPlayer)
+            }
+        }
     private var isValid : Bool {[firstname,lastname,teamname,country].allSatisfy{!$0.isEmpty}}
-}
+    }
+    
+
+
 
 struct MOAddPlayerView_Previews: PreviewProvider {
     static var previews: some View {

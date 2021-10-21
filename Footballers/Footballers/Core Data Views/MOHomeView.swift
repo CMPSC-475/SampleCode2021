@@ -25,7 +25,7 @@ struct MOHomeView: View {
             NavigationLink(destination: MOFootballersListView(footballers: players)) {
                 HomeButton(title: "Players")
             }
-            NavigationLink(destination: MOTeamListView())  {
+            NavigationLink(destination: MOTeamListView( teams: teams))  {
                 HomeButton(title: "Teams")
             }
         }.accentColor(Color.black)
@@ -33,6 +33,7 @@ struct MOHomeView: View {
             .onAppear {
                 if isInitial {
                     addPlayers()
+                    isInitial = false
                 }
             }
     }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MOTeamListView: View {
     @EnvironmentObject var manager : PlayersManager
-
+    var teams : FetchedResults<TeamMO>
+    
     var body: some View {
         List{
 
@@ -30,8 +31,8 @@ struct MOTeamListView: View {
     }
 }
 
-struct MOTeamListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MOTeamListView()
-    }
-}
+//struct MOTeamListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MOTeamListView()
+//    }
+//}
