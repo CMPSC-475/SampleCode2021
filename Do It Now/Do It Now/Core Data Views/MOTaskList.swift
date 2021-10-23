@@ -14,21 +14,23 @@ struct MOTaskList: View {
     
     @State var indexSet : Set<ItemMO> = []
     @State var editMode : EditMode = .inactive
-
+    @State var isAscending = true
     
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \ItemMO.date, ascending: true)],
-//        //predicate: NSPredicate(format: "name contains 'n'"),
-//        animation: .default)
-//    private var items: FetchedResults<ItemMO>
-    var fetchRequst : FetchRequest<ItemMO>
-    var items : FetchedResults<ItemMO> { fetchRequst.wrappedValue
-    }
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \ItemMO.date, ascending: true)],
+        //predicate: NSPredicate(format: "name contains 'n'"),
+        animation: .default)
+    private var items: FetchedResults<ItemMO>
     
-    init(isAscending:Bool) {
-        fetchRequst = FetchRequest<ItemMO>(
-            sortDescriptors: [NSSortDescriptor(keyPath:\ItemMO.date, ascending: isAscending)])
-    }
+    var sortDescriptors : [NSSortDescriptor] {[NSSortDescriptor(keyPath:\ItemMO.date, ascending: isAscending)]}
+    
+    //var fetchRequst : FetchRequest<ItemMO>
+   // var items : FetchedResults<ItemMO> { fetchRequst.wrappedValue }
+    
+//    init(isAscending:Bool) {
+//        fetchRequst = FetchRequest<ItemMO>(
+//            sortDescriptors: [NSSortDescriptor(keyPath:\ItemMO.date, ascending: isAscending)])
+//    }
     
     var body: some View {
         
@@ -43,7 +45,14 @@ struct MOTaskList: View {
             ToolbarItem(placement: .primaryAction) {
                 EditButton()
             }
-
+            ToolbarItem(placement: .automatic) {
+                Button(action:{isAscending.toggle()
+                    //New for iOS15: assigning to nsSortDescriptors
+                    items.nsSortDescriptors = sortDescriptors
+                }) {
+                    Image(systemName: orderImage)
+                }
+            }
             ToolbarItem(placement: .bottomBar) {
                 Button(action: {indexSet.forEach({viewContext.delete($0)})}) {
                     Image(systemName: "trash")
@@ -53,7 +62,7 @@ struct MOTaskList: View {
             
         }
     }
-
+    var orderImage : String {isAscending ? "menubar.arrow.down.rectangle" : "menubar.arrow.up.rectangle"}
 }
 
 struct MOTaskList_Previews: PreviewProvider {

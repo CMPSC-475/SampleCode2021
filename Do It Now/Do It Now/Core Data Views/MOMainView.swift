@@ -21,7 +21,7 @@ struct MOMainView: View {
                         .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
                 }
                 
-                MOTaskList(isAscending: isAscending)
+                MOTaskList() //(isAscending: isAscending)
             }
 
             .animation(.easeInOut, value: isAdding)
@@ -34,16 +34,12 @@ struct MOMainView: View {
                         Image(systemName: "plus.square")
                     }
                 }
-                ToolbarItem(placement: .automatic) {
-                    Button(action:{isAscending.toggle()}) {
-                        Image(systemName: orderImage)
-                    }
-                }
+
 
             }
         }
     }
-    var orderImage : String {isAscending ? "menubar.arrow.down.rectangle" : "menubar.arrow.up.rectangle"}
+
 }
 
 struct MOMainView_Previews: PreviewProvider {
