@@ -19,6 +19,11 @@ class TopAppManager : ObservableObject{
         retrieveData()
     }
     
+    // find index of an app
+    func index(for app:AppInfo) -> Int? {
+        topApps.firstIndex(where: {app.id == $0.id})
+    }
+    
     func retrieveData() {
         let urlSession = URLSession.shared
         let url = URL(string: urlString)!
@@ -32,27 +37,45 @@ class TopAppManager : ObservableObject{
                 self.topApps = _topApps
             }
             
-            self.retrieveImages()
+            // Retrieve images here for eager version
+            //self.retrieveImages()
         }
         
         task.resume()
     }
     
+    
     func retrieveImages() {
-        let urlSession = URLSession.shared
+        //let urlSession = URLSession.shared
         for i in topApps.indices {
-            let url = URL(string: topApps[i].imageURL)!
-            let task = urlSession.downloadTask(with: url) { imageURL, response , error in
-                guard (error == nil) else {return}
-                if let data = try? Data(contentsOf: imageURL!) {
-                    DispatchQueue.main.async {
-                        self.topApps[i].addImageData(data)
-                    }
-                }
-                
-            }
-            task.resume()
+            appImageData(at: i)
+//            let url = URL(string: topApps[i].imageURL)!
+//            let task = urlSession.downloadTask(with: url) { imageURL, response , error in
+//                guard (error == nil) else {return}
+//                if let data = try? Data(contentsOf: imageURL!) {
+//                    DispatchQueue.main.async {
+//                        self.topApps[i].addImageData(data)
+//                    }
+//                }
+//            }
+//            task.resume()
         }
+    }
+    
+    func appImageData(at index:Int) {
+        let app = topApps[index]
+        guard app.imageData == nil else {return}
+        
+        let url = URL(string:app.imageURL)!
+        let urlSession = URLSession.shared
+        let task = urlSession.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {return}
+            
+            DispatchQueue.main.async{
+                self.topApps[index].addImageData(data)
+            }
+        }
+        task.resume()
     }
     
     func  appsFrom(data:Data) -> [AppInfo] {
