@@ -12,12 +12,12 @@ struct AppRow: View {
     var appInfo : AppInfo
     var body : some View {
         HStack {
-            //TODO: Image goes hereif
             if let data = appInfo.imageData {
                 let image = UIImage(data: data)
                 Image(uiImage:image!)
-            } else {
-                
+            } else {  // lazy retrieval of images
+                let _ = manager.appImageData(at: manager.index(for: appInfo)!)
+                EmptyView()
             }
             VStack {
                 Text(appInfo.title)
