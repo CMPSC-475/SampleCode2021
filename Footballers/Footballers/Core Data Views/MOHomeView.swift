@@ -53,11 +53,13 @@ struct MOHomeView: View {
         if let team = teams.first(where: { (teamMO) in
             teamMO.name == player.teamname }) {
             newPlayer.team = team
+           
             //team.addToRoster(newPlayer)
         } else {
             let newTeam = TeamMO(context: viewContext)
             newTeam.name = player.teamname
             newTeam.addToRoster(newPlayer)
+            try? viewContext.save()  // seems necessary to update teams fetch results
         }
        
     }

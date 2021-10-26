@@ -10,14 +10,16 @@ import SwiftUI
 struct MOTeamListView: View {
     @EnvironmentObject var manager : PlayersManager
     var teams : FetchedResults<TeamMO>
+    let playerOrder = {(player1:PlayerMO, player2:PlayerMO) -> Bool in player1.lastname < player2.lastname}
     
     var body: some View {
         List{
 
-            ForEach(manager.teams) {team in
+            ForEach(teams) {team in
+                let orderedRoster = (Array(team.roster).sorted(by: playerOrder))
                 Section {
-                    ForEach (team.roster) {player in
-                        PlayerRowView(player: player)
+                    ForEach (orderedRoster) {player in
+                        MOPlayerRowView(player: player)
                     }
                     
                 } header: {
