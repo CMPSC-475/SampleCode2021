@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0B51262729B1A300810BCB /* TopAppManager+CompletionBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0B51252729B1A300810BCB /* TopAppManager+CompletionBlocks.swift */; };
 		3B3412AA2726E8FF00971EFD /* Top_AppsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3412A92726E8FF00971EFD /* Top_AppsApp.swift */; };
 		3B3412AC2726E8FF00971EFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3412AB2726E8FF00971EFD /* ContentView.swift */; };
 		3B3412AE2726E90100971EFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3412AD2726E90100971EFD /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0B51252729B1A300810BCB /* TopAppManager+CompletionBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopAppManager+CompletionBlocks.swift"; sourceTree = "<group>"; };
 		3B3412A62726E8FF00971EFD /* Top Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3412A92726E8FF00971EFD /* Top_AppsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_AppsApp.swift; sourceTree = "<group>"; };
 		3B3412AB2726E8FF00971EFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3412BE2726E9ED00971EFD /* TopAppManager.swift */,
+				3B0B51252729B1A300810BCB /* TopAppManager+CompletionBlocks.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3412AC2726E8FF00971EFD /* ContentView.swift in Sources */,
+				3B0B51262729B1A300810BCB /* TopAppManager+CompletionBlocks.swift in Sources */,
 				3B3412BB2726E96000971EFD /* TopAppData.swift in Sources */,
 				3B3412C12726EB5C00971EFD /* AppDetails.swift in Sources */,
 				3B3412BF2726E9ED00971EFD /* TopAppManager.swift in Sources */,
