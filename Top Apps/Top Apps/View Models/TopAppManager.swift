@@ -29,7 +29,17 @@ class TopAppManager : ObservableObject{
         let url = URL(string: urlString)!
         
         let task = urlSession.dataTask(with: url) { [self] data, response, error in
-            guard (error == nil) else {return}
+            
+            guard (error == nil) else {
+                //TODO: Handle Error
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+
+                //TODO: Handle Error
+                return
+            }
             
             let _topApps = self.appsFrom(data: data!)
             
