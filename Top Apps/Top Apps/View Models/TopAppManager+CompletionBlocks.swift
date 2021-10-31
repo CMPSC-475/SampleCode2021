@@ -23,6 +23,9 @@ extension TopAppManager {
             guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
 
                 //TODO: Handle Error
+                DispatchQueue.main.sync {
+                httpError = true
+                }
                 return
             }
             

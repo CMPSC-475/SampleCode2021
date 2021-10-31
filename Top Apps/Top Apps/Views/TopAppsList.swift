@@ -22,6 +22,8 @@ struct TopAppsList: View {
 
                 }
             }
+            .alert("Error", isPresented: $manager.httpError, actions: {})
+            
             .navigationTitle(Text("Top Apps"))
 
         }

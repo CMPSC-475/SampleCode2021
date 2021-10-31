@@ -15,10 +15,11 @@ struct AppRow: View {
             if let data = appInfo.imageData {
                 let image = UIImage(data: data)
                 Image(uiImage:image!)
-            } else {  // lazy retrieval of images
-                let _ = manager.appImageData(at: manager.index(for: appInfo)!)
-                EmptyView()
             }
+            //else {  // lazy retrieval of images
+//                let _ = manager.appImageData(at: manager.index(for: appInfo)!)
+//                EmptyView()
+//            }
             VStack {
                 Text(appInfo.title)
                 Text(appInfo.author)
