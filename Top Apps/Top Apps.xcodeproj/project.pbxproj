@@ -19,6 +19,8 @@
 		3B3412BF2726E9ED00971EFD /* TopAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3412BE2726E9ED00971EFD /* TopAppManager.swift */; };
 		3B3412C12726EB5C00971EFD /* AppDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3412C02726EB5C00971EFD /* AppDetails.swift */; };
 		3B3412C32726EDE800971EFD /* AppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3412C22726EDE800971EFD /* AppRow.swift */; };
+		3B6F96022732E81100F72701 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F96012732E81100F72701 /* ErrorView.swift */; };
+		3B6F96042732E86700F72701 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F96032732E86700F72701 /* HTTPError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3B3412BE2726E9ED00971EFD /* TopAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppManager.swift; sourceTree = "<group>"; };
 		3B3412C02726EB5C00971EFD /* AppDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetails.swift; sourceTree = "<group>"; };
 		3B3412C22726EDE800971EFD /* AppRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRow.swift; sourceTree = "<group>"; };
+		3B6F96012732E81100F72701 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		3B6F96032732E86700F72701 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 				3B3412BC2726E99600971EFD /* TopAppsList.swift */,
 				3B3412C22726EDE800971EFD /* AppRow.swift */,
 				3B3412C02726EB5C00971EFD /* AppDetails.swift */,
+				3B6F96012732E81100F72701 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				3B0B5127272B09C900810BCB /* TopAppManager+Operations.swift */,
 				3B0B51252729B1A300810BCB /* TopAppManager+CompletionBlocks.swift */,
 				3B0B51292731A40800810BCB /* TopAppManager+async.swift */,
+				3B6F96032732E86700F72701 /* HTTPError.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -189,12 +195,14 @@
 				3B3412AC2726E8FF00971EFD /* ContentView.swift in Sources */,
 				3B0B51262729B1A300810BCB /* TopAppManager+CompletionBlocks.swift in Sources */,
 				3B3412BB2726E96000971EFD /* TopAppData.swift in Sources */,
+				3B6F96042732E86700F72701 /* HTTPError.swift in Sources */,
 				3B3412C12726EB5C00971EFD /* AppDetails.swift in Sources */,
 				3B0B5128272B09C900810BCB /* TopAppManager+Operations.swift in Sources */,
 				3B3412BF2726E9ED00971EFD /* TopAppManager.swift in Sources */,
 				3B3412AA2726E8FF00971EFD /* Top_AppsApp.swift in Sources */,
 				3B3412C32726EDE800971EFD /* AppRow.swift in Sources */,
 				3B3412BD2726E99600971EFD /* TopAppsList.swift in Sources */,
+				3B6F96022732E81100F72701 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
