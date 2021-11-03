@@ -17,8 +17,12 @@ class TopAppManager : ObservableObject{
 
     //TODO: retrieve app data
     init() {
+        Task {
+             await asyncRetrieveData()
+        }
+        
         //retrieveData()
-        retrieveWithOperations()
+        //retrieveWithOperations()
     }
     
     // find index of an app
