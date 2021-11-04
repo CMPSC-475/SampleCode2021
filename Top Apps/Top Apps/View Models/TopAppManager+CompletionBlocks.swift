@@ -24,7 +24,7 @@ extension TopAppManager {
 
                 //TODO: Handle Error
                 DispatchQueue.main.sync {
-                httpError = true
+                //httpError = true
                 }
                 return
             }

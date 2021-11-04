@@ -10,7 +10,8 @@ import Foundation
 class TopAppManager : ObservableObject{
     // downloaded app information
     @Published var topApps = [AppInfo]()
-    @Published var httpError = false
+    @Published var httpError : HTTPError?
+    
     
     //json feed from Apple for Top Paid Apps
     let urlString = "https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json"

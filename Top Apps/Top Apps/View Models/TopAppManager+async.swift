@@ -10,6 +10,8 @@ import Foundation
 extension TopAppManager {
     
     func asyncRetrieveData() async {
+        let urlString = "https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json"
+
         let urlSession = URLSession.shared
         let url = URL(string: urlString)!
         
@@ -21,7 +23,7 @@ extension TopAppManager {
 
                 //TODO: Handle Error
                 DispatchQueue.main.sync {
-                httpError = true
+                httpError = HTTPError(response: response as! HTTPURLResponse)
                 }
                 return
             }
@@ -32,7 +34,7 @@ extension TopAppManager {
                 self.topApps = _topApps
             }
             
-            await self.asyncRetrieveImages()
+            await self.concurrentRetrieveImages()
         } catch {
             print(error)
             // Retrieve images here for eager version
@@ -42,19 +44,36 @@ extension TopAppManager {
     }
     
     func asyncRetrieveImages() async {
-        //let urlSession = URLSession.shared
         for i in topApps.indices {
-            let url = URL(string: topApps[i].imageURL)!
-            do {
-                let (data,response) = try await URLSession.shared.data(from: url)
-                DispatchQueue.main.async {
-                    self.topApps[i].addImageData(data)
+            //await asyncRetrieveSingleImage(index: i)
+        }
+    }
+    
+    func asyncRetrieveSingleImage(index i:Int) async throws -> Data {
+        let url = URL(string: topApps[i].imageURL)!
+
+            let (data,_) = try await URLSession.shared.data(from: url)
+            return data
+
+    }
+    
+    func concurrentRetrieveImages() async {
+        do {
+            try await withThrowingTaskGroup(of: (Data,Int).self, body: { group in
+                for i in topApps.indices {
+                    group.addTask {
+                        async let data = self.asyncRetrieveSingleImage(index: i)
+                        return try await (data, i)
+                    }
                 }
-            }
-            catch {
-                print(error)
-            }
-            
+                for try await (data,i) in group {
+                    DispatchQueue.main.async {
+                        self.topApps[i].addImageData(data)
+                    }
+                }
+            })
+        } catch {
+            print("Error")
         }
     }
     

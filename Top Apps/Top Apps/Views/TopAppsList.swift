@@ -22,7 +22,15 @@ struct TopAppsList: View {
 
                 }
             }
-            .alert("Error", isPresented: $manager.httpError, actions: {})
+            .overlay(alignment:.top) {
+                if manager.httpError != nil {
+                ErrorView(error: $manager.httpError)
+                }
+            }
+            .refreshable {
+                await manager.asyncRetrieveData()
+            }
+            //.alert("Error", isPresented: $manager.httpError, actions: {})
             
             .navigationTitle(Text("Top Apps"))
 
