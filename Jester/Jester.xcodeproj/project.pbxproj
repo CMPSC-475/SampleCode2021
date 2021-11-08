@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B54CD8427399891000DE31C /* JesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD8327399891000DE31C /* JesterApp.swift */; };
+		3B54CD8827399892000DE31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8727399892000DE31C /* Assets.xcassets */; };
+		3B54CD8B27399892000DE31C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8A27399892000DE31C /* Preview Assets.xcassets */; };
+		3B54CD922739995C000DE31C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD912739995C000DE31C /* RootView.swift */; };
+		3B54CD942739997C000DE31C /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD932739997C000DE31C /* Tutorial.swift */; };
+		3B54CD962739999A000DE31C /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD952739999A000DE31C /* Position.swift */; };
+		3B54CD98273999A3000DE31C /* HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD97273999A3000DE31C /* HitTest.swift */; };
+		3B54CD9E273999E8000DE31C /* BaseballCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD9D273999E8000DE31C /* BaseballCardView.swift */; };
+		3B54CDA0273999EB000DE31C /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD9F273999EB000DE31C /* Manager.swift */; };
+		3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA1273999EE000DE31C /* CardStack.swift */; };
+		3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA3273999F8000DE31C /* CardFlip.swift */; };
+		3B54CDA82739AD53000DE31C /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA72739AD53000DE31C /* CardManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B54CD8027399891000DE31C /* Jester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B54CD8327399891000DE31C /* JesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesterApp.swift; sourceTree = "<group>"; };
+		3B54CD8727399892000DE31C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B54CD8A27399892000DE31C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B54CD912739995C000DE31C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		3B54CD932739997C000DE31C /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		3B54CD952739999A000DE31C /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		3B54CD97273999A3000DE31C /* HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTest.swift; sourceTree = "<group>"; };
+		3B54CD9D273999E8000DE31C /* BaseballCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballCardView.swift; sourceTree = "<group>"; };
+		3B54CD9F273999EB000DE31C /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		3B54CDA1273999EE000DE31C /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
+		3B54CDA3273999F8000DE31C /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
+		3B54CDA72739AD53000DE31C /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B54CD7D27399891000DE31C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B54CD7727399890000DE31C = {
+			isa = PBXGroup;
+			children = (
+				3B54CD8227399891000DE31C /* Jester */,
+				3B54CD8127399891000DE31C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B54CD8127399891000DE31C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B54CD8027399891000DE31C /* Jester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B54CD8227399891000DE31C /* Jester */ = {
+			isa = PBXGroup;
+			children = (
+				3B54CD8327399891000DE31C /* JesterApp.swift */,
+				3B54CD912739995C000DE31C /* RootView.swift */,
+				3B54CD932739997C000DE31C /* Tutorial.swift */,
+				3B54CD952739999A000DE31C /* Position.swift */,
+				3B54CD97273999A3000DE31C /* HitTest.swift */,
+				3B54CDAA2739AD98000DE31C /* Baseball Cards */,
+				3B54CDA92739AD85000DE31C /* Flip */,
+				3B54CD8727399892000DE31C /* Assets.xcassets */,
+				3B54CD8927399892000DE31C /* Preview Content */,
+			);
+			path = Jester;
+			sourceTree = "<group>";
+		};
+		3B54CD8927399892000DE31C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3B54CD8A27399892000DE31C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B54CDA92739AD85000DE31C /* Flip */ = {
+			isa = PBXGroup;
+			children = (
+				3B54CDA3273999F8000DE31C /* CardFlip.swift */,
+				3B54CDA72739AD53000DE31C /* CardManager.swift */,
+			);
+			path = Flip;
+			sourceTree = "<group>";
+		};
+		3B54CDAA2739AD98000DE31C /* Baseball Cards */ = {
+			isa = PBXGroup;
+			children = (
+				3B54CD9D273999E8000DE31C /* BaseballCardView.swift */,
+				3B54CD9F273999EB000DE31C /* Manager.swift */,
+				3B54CDA1273999EE000DE31C /* CardStack.swift */,
+			);
+			path = "Baseball Cards";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B54CD7F27399891000DE31C /* Jester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B54CD8E27399892000DE31C /* Build configuration list for PBXNativeTarget "Jester" */;
+			buildPhases = (
+				3B54CD7C27399891000DE31C /* Sources */,
+				3B54CD7D27399891000DE31C /* Frameworks */,
+				3B54CD7E27399891000DE31C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jester;
+			productName = Jester;
+			productReference = 3B54CD8027399891000DE31C /* Jester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B54CD7827399890000DE31C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					3B54CD7F27399891000DE31C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 3B54CD7B27399890000DE31C /* Build configuration list for PBXProject "Jester" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B54CD7727399890000DE31C;
+			productRefGroup = 3B54CD8127399891000DE31C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B54CD7F27399891000DE31C /* Jester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B54CD7E27399891000DE31C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B54CD8B27399892000DE31C /* Preview Assets.xcassets in Resources */,
+				3B54CD8827399892000DE31C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B54CD7C27399891000DE31C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B54CD922739995C000DE31C /* RootView.swift in Sources */,
+				3B54CD942739997C000DE31C /* Tutorial.swift in Sources */,
+				3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */,
+				3B54CDA82739AD53000DE31C /* CardManager.swift in Sources */,
+				3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */,
+				3B54CD9E273999E8000DE31C /* BaseballCardView.swift in Sources */,
+				3B54CD962739999A000DE31C /* Position.swift in Sources */,
+				3B54CDA0273999EB000DE31C /* Manager.swift in Sources */,
+				3B54CD8427399891000DE31C /* JesterApp.swift in Sources */,
+				3B54CD98273999A3000DE31C /* HitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B54CD8C27399892000DE31C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B54CD8D27399892000DE31C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B54CD8F27399892000DE31C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Jester/Preview Content\"";
+				DEVELOPMENT_TEAM = 9QQAQWEZF8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.jjh9.Jester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B54CD9027399892000DE31C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Jester/Preview Content\"";
+				DEVELOPMENT_TEAM = 9QQAQWEZF8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.jjh9.Jester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B54CD7B27399890000DE31C /* Build configuration list for PBXProject "Jester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B54CD8C27399892000DE31C /* Debug */,
+				3B54CD8D27399892000DE31C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B54CD8E27399892000DE31C /* Build configuration list for PBXNativeTarget "Jester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B54CD8F27399892000DE31C /* Debug */,
+				3B54CD9027399892000DE31C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B54CD7827399890000DE31C /* Project object */;
+}
