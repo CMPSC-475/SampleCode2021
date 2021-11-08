@@ -10,8 +10,6 @@ import SwiftUI
 
 struct CardFlip: View {
     @StateObject var manager = CardManager()
-    let frontDegrees : Double = 0.0
-    let backDegrees : Double = 180.0
     
     var body: some View {
         

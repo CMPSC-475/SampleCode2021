@@ -21,7 +21,8 @@ struct CardState {
     var imageName : String {showingFront ? frontImageName :  backImageName}
     
     let frontDegrees : Double = 0.0
-    let backDegrees : Double = 180.0
+    let backDegrees : Double = -180.0
+    let midDegrees : Double = -90.0
     
     mutating func showFront() {
         degrees = frontDegrees
@@ -29,7 +30,7 @@ struct CardState {
     }
     
     mutating func showBack() {
-        degrees = -backDegrees
+        degrees = backDegrees
         flipping = .startingBack
     }
     
@@ -40,11 +41,11 @@ struct CardState {
     }
     
     func degreesFrom(_ value: Double) -> Double {
-        let newValue = forwardFlip ? value : value - 180
-        if newValue > 0.0 {
-            return 0.0
-        } else if newValue < -180.0 {
-            return -180.0
+        let newValue = forwardFlip ? value : value - 180 //backflip value starts at 0
+        if newValue > frontDegrees {
+            return frontDegrees
+        } else if newValue < backDegrees {
+            return backDegrees
         } else {
             return newValue
         }
@@ -53,13 +54,13 @@ struct CardState {
     func updateFlip() -> CardFlipping {
         switch flipping {
         case .startingFront:
-            return (degrees < -90.0) ? .endingBack : .startingFront
+            return (degrees < midDegrees) ? .endingBack : .startingFront
         case .endingBack:
-            return (degrees < -90.0) ? .endingBack : .startingFront
+            return (degrees < midDegrees) ? .endingBack : .startingFront
         case .startingBack:
-            return (degrees < -90.0) ? .startingBack : .endingFront
+            return (degrees < midDegrees) ? .startingBack : .endingFront
         case .endingFront:
-            return (degrees < -90.0) ? .startingBack : .endingFront
+            return (degrees < midDegrees) ? .startingBack : .endingFront
             
         }
     }
