@@ -22,7 +22,7 @@ struct CardFlip: View {
             .onEnded { (value) in
 
             }
-        Image(manager.cardState.imageName)
+        Image(manager.hamiltonCard.imageName)
             .resizable()
             .aspectRatio(1.0, contentMode: .fit)
             .padding()
