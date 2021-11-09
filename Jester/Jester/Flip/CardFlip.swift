@@ -9,25 +9,40 @@ import SwiftUI
 
 
 struct CardFlip: View {
-    @StateObject var manager = CardManager()
+    enum DraggingState {
+        case right, left
+    }
     
+    @State private var degrees  : Double = 0.0  // rotation angle
+    @State private var swiping  = DraggingState.left //swipe direction
+
+    
+    var frontImageName = "Hamilton Front"
+    var backImageName = "Hamilton Back"
+    
+    let frontDegrees : Double = 0.0
+    let backDegrees : Double = -180.0
+    let midDegrees : Double = -90.0
+
     var body: some View {
         
-        
-        let swipe = DragGesture()
-            .onChanged{ (value) in
-              
-            }
-        
-            .onEnded { (value) in
 
-            }
-        Image(manager.hamiltonCard.imageName)
-            .resizable()
-            .aspectRatio(1.0, contentMode: .fit)
-            .padding()
+        FlipImage(name: frontImageName)
+        .rotation3DEffect(Angle(degrees:degrees), axis: (0,1,0))
 
-            .gesture(swipe)
+    }
+    
+
+
+  // Rotation should be between 0 and -180
+    func rotationDegreesFor(_ translation: Double) -> Double {
+        if translation > frontDegrees {
+            return  frontDegrees
+        } else if translation < backDegrees {
+            return  backDegrees
+        } else {
+            return translation
+        }
     }
     
 }

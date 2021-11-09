@@ -18,7 +18,7 @@
 		3B54CDA0273999EB000DE31C /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD9F273999EB000DE31C /* Manager.swift */; };
 		3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA1273999EE000DE31C /* CardStack.swift */; };
 		3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA3273999F8000DE31C /* CardFlip.swift */; };
-		3B54CDA82739AD53000DE31C /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA72739AD53000DE31C /* CardManager.swift */; };
+		3B54CDAF273B1D47000DE31C /* FlipImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDAE273B1D47000DE31C /* FlipImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		3B54CD9F273999EB000DE31C /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		3B54CDA1273999EE000DE31C /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		3B54CDA3273999F8000DE31C /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
-		3B54CDA72739AD53000DE31C /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
+		3B54CDAE273B1D47000DE31C /* FlipImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3B54CDA3273999F8000DE31C /* CardFlip.swift */,
-				3B54CDA72739AD53000DE31C /* CardManager.swift */,
+				3B54CDAE273B1D47000DE31C /* FlipImage.swift */,
 			);
 			path = Flip;
 			sourceTree = "<group>";
@@ -180,12 +180,12 @@
 				3B54CD922739995C000DE31C /* RootView.swift in Sources */,
 				3B54CD942739997C000DE31C /* Tutorial.swift in Sources */,
 				3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */,
-				3B54CDA82739AD53000DE31C /* CardManager.swift in Sources */,
 				3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */,
 				3B54CD9E273999E8000DE31C /* BaseballCardView.swift in Sources */,
 				3B54CD962739999A000DE31C /* Position.swift in Sources */,
 				3B54CDA0273999EB000DE31C /* Manager.swift in Sources */,
 				3B54CD8427399891000DE31C /* JesterApp.swift in Sources */,
+				3B54CDAF273B1D47000DE31C /* FlipImage.swift in Sources */,
 				3B54CD98273999A3000DE31C /* HitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
