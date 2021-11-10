@@ -14,10 +14,29 @@ struct Tutorial: View {
     @State private var rotationAngle : Angle = Angle.zero
     @State private var scaleFactor : CGFloat = 1.0
     
-    @State private var location: CGPoint = CGPoint(x: 190, y: 50)
+    @State private var orangeLocation: CGPoint = CGPoint(x: 190, y: 50)
+    @State private var blueLocation: CGPoint = CGPoint(x: 190, y: 50)
+
     @State private var dragOffset = CGSize.zero
-    @GestureState private var scale : CGFloat = 1.0
+    @GestureState private var magScale : CGFloat = 1.0
     
+    enum MoveState : Equatable {
+        case initial
+        case moving(CGSize)
+    }
+    @GestureState private var moveState = MoveState.initial
+    var moveScale : CGFloat {moveState == .initial ? 1.0 : 1.2}
+    var moveOffset : CGSize {
+        switch moveState {
+        case .initial:
+            return CGSize.zero
+        case .moving(let t):
+            return t
+        }
+        
+    }
+    @State private var offset : CGSize = CGSize.zero
+    @State private var scale : CGFloat = 1.0
     var body: some View {
        
         let tapGesture = TapGesture()
@@ -38,7 +57,7 @@ struct Tutorial: View {
             }
         
         let magGesture = MagnificationGesture()
-            .updating($scale) { value, state, Transaction in
+            .updating($magScale) { value, state, Transaction in
                 state = value
             }
 //            .onChanged { value in
@@ -58,6 +77,41 @@ struct Tutorial: View {
             .onChanged { value in
                 dragOffset = value.translation
             }
+        
+        let movePosition = DragGesture()
+            .updating($moveState) { (value, state, _) in
+                switch state {
+                case .initial:
+                    state = .moving(CGSize.zero)
+                case .moving( _):
+                    state = .moving(value.translation)
+                }
+            }
+        
+        let pressAndDragGesture = LongPressGesture(minimumDuration: 0.01).sequenced(before:DragGesture())
+            .onChanged { (value) in
+                switch value {
+                case .first(_):
+                    withAnimation {
+                        scale = 1.2
+                    }
+                case .second(true, let drag):
+                    self.blueLocation = drag?.location ?? self.blueLocation
+                default:
+                    break
+                }
+            }
+            .onEnded { (value) in
+                switch value {
+                case .first(true):
+                    break
+                case .second(true, _):
+                    withAnimation {scale = 1.0}
+                default:
+                    break
+                }
+            }
+
         
         return ScrollView {
             VStack(spacing:30) {
@@ -81,15 +135,22 @@ struct Tutorial: View {
                 
                 SealView()
                     .rotationEffect(rotationAngle)
-                    .scaleEffect(scale)
+                    .scaleEffect(magScale)
                     .gesture(magGesture)
                     //.gesture(rotateGesture)
                     //.gesture(magRotate)
                 
-                OrangeSquare()
-                    .position(location)
-                    .offset(dragOffset)
-                    .gesture(dragGesture)
+                ColorSquare(color:.orange)
+                    .scaleEffect(moveScale)
+                    .position(orangeLocation)
+                    .offset(moveOffset)
+                    .gesture(movePosition)
+                
+                ColorSquare(color:.blue)
+                    .scaleEffect(scale)
+                    .position(blueLocation)
+                    .offset(offset)
+                    .gesture(pressAndDragGesture)
                 
                 Text("Bottom Text")
             }
@@ -113,11 +174,13 @@ struct SealView : View {
     }
 }
 
-struct OrangeSquare : View {
+struct ColorSquare : View {
+    var color : Color
     var body : some View {
         RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(.orange)
+            .foregroundColor(color)
             .frame(width: 100, height: 100)
 
     }
 }
+
