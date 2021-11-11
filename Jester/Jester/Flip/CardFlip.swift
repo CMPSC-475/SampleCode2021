@@ -11,6 +11,9 @@ import SwiftUI
 struct CardFlip: View {
     enum DraggingState {
         case right, left
+        func toggle() -> DraggingState {
+            self == .left ? .right : .left
+        }
     }
     
     @State private var degrees  : Double = 0.0  // rotation angle
@@ -40,17 +43,19 @@ struct CardFlip: View {
                 }
             }
             .onEnded { value  in
-                if isShowingBack {
-                    withAnimation { degrees = backDegrees}
-                    swiping = .right
-                } else {
-                    withAnimation { degrees = frontDegrees}
-                    swiping = .left
-                }
+                withAnimation { degrees = flipDegrees}
+                swiping = isShowingBack ? .right : .left
+//                if isShowingBack {
+//                    withAnimation { degrees = backDegrees}
+//                    swiping = .right
+//                } else {
+//                    withAnimation { degrees = frontDegrees}
+//                    swiping = .left
+//                }
             }
         FlipImage(name: imageName)
-            .rotation3DEffect(Angle(degrees:flipDegrees), axis: (0,1,0))
-        .rotation3DEffect(Angle(degrees:degrees), axis: (0,1,0))
+            //.rotation3DEffect(Angle(degrees:flipDegrees), axis: (0,1,0))
+        .rotation3DEffect(Angle(degrees:(degrees + flipDegrees)), axis: (0,1,0))
         .gesture(swipe)
     }
     

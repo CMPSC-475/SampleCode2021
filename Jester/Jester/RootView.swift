@@ -24,6 +24,9 @@ struct RootView: View {
                 NavigationLink(destination: {CardFlip()}) {
                     Label("Flip", systemImage: "arrow.left.and.right.righttriangle.left.righttriangle.right")
                 }
+                NavigationLink(destination: {HamiltonCard()}) {
+                    Label("Flip (Generic)", systemImage: "arrow.left.and.right.righttriangle.left.righttriangle.right")
+                }
                 NavigationLink(destination: {HitTest()}) {
                     Label("Hit Test", systemImage: "testtube.2")
                 }

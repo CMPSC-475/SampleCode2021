@@ -18,6 +18,8 @@
 		3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA1273999EE000DE31C /* CardStack.swift */; };
 		3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA3273999F8000DE31C /* CardFlip.swift */; };
 		3B54CDAF273B1D47000DE31C /* FlipImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDAE273B1D47000DE31C /* FlipImage.swift */; };
+		3B54CDB3273DB006000DE31C /* Flippable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDB2273DB006000DE31C /* Flippable.swift */; };
+		3B54CDB5273DB0E8000DE31C /* HamiltonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDB4273DB0E8000DE31C /* HamiltonCard.swift */; };
 		3B6F9628273D5D1B00F72701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8727399892000DE31C /* Assets.xcassets */; };
 		3BA88D0F273D886700892253 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88D0E273D886700892253 /* Draggable.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		3B54CDA1273999EE000DE31C /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		3B54CDA3273999F8000DE31C /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		3B54CDAE273B1D47000DE31C /* FlipImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipImage.swift; sourceTree = "<group>"; };
+		3B54CDB2273DB006000DE31C /* Flippable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flippable.swift; sourceTree = "<group>"; };
+		3B54CDB4273DB0E8000DE31C /* HamiltonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamiltonCard.swift; sourceTree = "<group>"; };
 		3BA88D0E273D886700892253 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				3B54CDA3273999F8000DE31C /* CardFlip.swift */,
+				3B54CDB2273DB006000DE31C /* Flippable.swift */,
+				3B54CDB4273DB0E8000DE31C /* HamiltonCard.swift */,
 				3B54CDAE273B1D47000DE31C /* FlipImage.swift */,
 			);
 			path = Flip;
@@ -181,10 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B54CD922739995C000DE31C /* RootView.swift in Sources */,
+				3B54CDB3273DB006000DE31C /* Flippable.swift in Sources */,
 				3B54CD942739997C000DE31C /* Tutorial.swift in Sources */,
 				3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */,
 				3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */,
 				3B54CD9E273999E8000DE31C /* BaseballCardView.swift in Sources */,
+				3B54CDB5273DB0E8000DE31C /* HamiltonCard.swift in Sources */,
 				3BA88D0F273D886700892253 /* Draggable.swift in Sources */,
 				3B54CD962739999A000DE31C /* Position.swift in Sources */,
 				3B54CDA0273999EB000DE31C /* Manager.swift in Sources */,
