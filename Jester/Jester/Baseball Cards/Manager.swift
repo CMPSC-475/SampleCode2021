@@ -21,8 +21,8 @@ struct CardInfo :Identifiable {
 
 class Manager :ObservableObject {
     
-    @Published var kept = [Int]()
-    @Published var traded = [Int]()
+    @Published var kept = [CardInfo]()
+    @Published var traded = [CardInfo]()
     @Published var cards : [CardInfo]
     
     init() {
@@ -30,11 +30,11 @@ class Manager :ObservableObject {
         cards = cardNumbers.map {CardInfo(id: $0, status: .unDecided)}
     }
     
-    func keptCard(number: Int) {
-        kept.append(number)
+    func keptCard(card: CardInfo) {
+        kept.append(card)
     }
-    func tradedCard(number: Int) {
-        traded.append(number)
+    func tradedCard(card: CardInfo) {
+        traded.append(card)
     }
     
     func reset() {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B54CD8427399891000DE31C /* JesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD8327399891000DE31C /* JesterApp.swift */; };
-		3B54CD8827399892000DE31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8727399892000DE31C /* Assets.xcassets */; };
 		3B54CD8B27399892000DE31C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8A27399892000DE31C /* Preview Assets.xcassets */; };
 		3B54CD922739995C000DE31C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD912739995C000DE31C /* RootView.swift */; };
 		3B54CD942739997C000DE31C /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CD932739997C000DE31C /* Tutorial.swift */; };
@@ -19,6 +18,8 @@
 		3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA1273999EE000DE31C /* CardStack.swift */; };
 		3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDA3273999F8000DE31C /* CardFlip.swift */; };
 		3B54CDAF273B1D47000DE31C /* FlipImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDAE273B1D47000DE31C /* FlipImage.swift */; };
+		3B6F9628273D5D1B00F72701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B54CD8727399892000DE31C /* Assets.xcassets */; };
+		3BA88D0F273D886700892253 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88D0E273D886700892253 /* Draggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3B54CDA1273999EE000DE31C /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		3B54CDA3273999F8000DE31C /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		3B54CDAE273B1D47000DE31C /* FlipImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipImage.swift; sourceTree = "<group>"; };
+		3BA88D0E273D886700892253 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				3B54CD8327399891000DE31C /* JesterApp.swift */,
 				3B54CD912739995C000DE31C /* RootView.swift */,
 				3B54CD932739997C000DE31C /* Tutorial.swift */,
+				3BA88D0E273D886700892253 /* Draggable.swift */,
 				3B54CD952739999A000DE31C /* Position.swift */,
 				3B54CD97273999A3000DE31C /* HitTest.swift */,
 				3B54CDAA2739AD98000DE31C /* Baseball Cards */,
@@ -165,8 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6F9628273D5D1B00F72701 /* Assets.xcassets in Resources */,
 				3B54CD8B27399892000DE31C /* Preview Assets.xcassets in Resources */,
-				3B54CD8827399892000DE31C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +185,7 @@
 				3B54CDA4273999F8000DE31C /* CardFlip.swift in Sources */,
 				3B54CDA2273999EE000DE31C /* CardStack.swift in Sources */,
 				3B54CD9E273999E8000DE31C /* BaseballCardView.swift in Sources */,
+				3BA88D0F273D886700892253 /* Draggable.swift in Sources */,
 				3B54CD962739999A000DE31C /* Position.swift in Sources */,
 				3B54CDA0273999EB000DE31C /* Manager.swift in Sources */,
 				3B54CD8427399891000DE31C /* JesterApp.swift in Sources */,
@@ -314,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Jester/Preview Content\"";
@@ -343,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Jester/Preview Content\"";

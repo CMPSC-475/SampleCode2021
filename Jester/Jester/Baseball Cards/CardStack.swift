@@ -15,6 +15,7 @@ struct CardStack: View {
         ZStack {
             ForEach($manager.cards) { $card in
                 BaseballCardView(cardInfo: $card)
+                    .stacked()
             }
             .padding(80)
         }
@@ -50,6 +51,7 @@ struct CardStack_Previews: PreviewProvider {
         CardStack()
     }
 }
+
 
 
 extension View {

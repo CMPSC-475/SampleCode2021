@@ -33,16 +33,42 @@ struct BaseballCardView: View {
     var body: some View {
         let drag = DragGesture()
             .onChanged {v in
+                offset = v.translation
+                angle = Angle(degrees: v.translation.width * angleChangeFactor)
             }
             .onEnded {v in
+               dragEnded(with: v)
             }
                 
         
         return Image("\(cardInfo.id)")
             .resizable()
             .aspectRatio(ratio, contentMode: .fit)
+            .offset(offset)
+            .rotationEffect(angle)
             .gesture(drag)
+            .onChange(of: cardInfo.status) { newValue in
+                offset = computedOffset
+                if newValue == .unDecided {
+                    angle = Angle.zero
+                }
+            }
+            .animation(.easeInOut(duration: 2.0), value:offset)
+            .animation(.easeInOut(duration: 2.0), value:angle)
 
+    }
+    
+    func dragEnded(with v:DragGesture.Value) {
+        if v.translation.width < -translationThreshold {
+            cardInfo.status = .traded
+            manager.tradedCard(card: cardInfo)
+        } else if v.translation.width  > translationThreshold {
+            cardInfo.status = .kept
+            manager.keptCard(card: cardInfo)
+        } else {
+            offset = CGSize.zero
+            angle = .zero
+        }
     }
 }
 

@@ -147,10 +147,11 @@ struct Tutorial: View {
                     .gesture(movePosition)
                 
                 ColorSquare(color:.blue)
-                    .scaleEffect(scale)
-                    .position(blueLocation)
-                    .offset(offset)
-                    .gesture(pressAndDragGesture)
+                    .draggable(location: $blueLocation)
+//                    .scaleEffect(scale)
+//                    .position(blueLocation)
+//                    .offset(offset)
+//                    .gesture(pressAndDragGesture)
                 
                 Text("Bottom Text")
             }
