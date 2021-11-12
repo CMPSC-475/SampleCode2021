@@ -22,25 +22,29 @@ struct CardFlip: View {
     
     var frontImageName = "Hamilton Front"
     var backImageName = "Hamilton Back"
-    var imageName : String {isShowingBack ? backImageName : frontImageName}
+
     
     let frontDegrees : Double = 0.0
     let backDegrees : Double = -180.0
     let midDegrees : Double = -90.0
 
-    var flipDegrees : Double {isShowingBack ? backDegrees : frontDegrees}
     var isShowingBack : Bool {degrees < midDegrees}
+    var imageName : String {isShowingBack ? backImageName : frontImageName}
+    var flipDegrees : Double {isShowingBack ? backDegrees : frontDegrees}
+    var swipingTranslation : Double {swiping == .right ? backDegrees : frontDegrees}
+    
     var body: some View {
         
         let swipe = DragGesture()
             .onChanged { value in
                 let translation = Double(value.translation.width)
-                switch swiping {
-                case .right:
-                    degrees = rotationDegreesFor(backDegrees + translation)
-                case .left:
-                    degrees = rotationDegreesFor(translation)
-                }
+                degrees = rotationDegreesFor(swipingTranslation + translation)
+//                switch swiping {
+//                case .right:
+//                    degrees = rotationDegreesFor(backDegrees + translation)
+//                case .left:
+//                    degrees = rotationDegreesFor(translation)
+//                }
             }
             .onEnded { value  in
                 withAnimation { degrees = flipDegrees}
