@@ -10,8 +10,6 @@ import SwiftUI
 class GameManager : ObservableObject {
     
     
-    func removeAll() {
-        
-    }
+
     
 }

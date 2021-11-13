@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var manager : GameManager
     var body: some View {
+        
         BackgroundView()
     }
 }

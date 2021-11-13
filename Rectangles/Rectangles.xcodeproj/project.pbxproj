@@ -15,6 +15,7 @@
 		3B54CDDA273EF93C000DE31C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDD9273EF93C000DE31C /* BackgroundView.swift */; };
 		3B54CDDC273EF9E3000DE31C /* GameShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDDB273EF9E3000DE31C /* GameShape.swift */; };
 		3B54CDDE273EFA7D000DE31C /* CG+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CDDD273EFA7D000DE31C /* CG+Convenience.swift */; };
+		3B54CE1527401E53000DE31C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CE1427401E53000DE31C /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		3B54CDD9273EF93C000DE31C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		3B54CDDB273EF9E3000DE31C /* GameShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShape.swift; sourceTree = "<group>"; };
 		3B54CDDD273EFA7D000DE31C /* CG+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG+Convenience.swift"; sourceTree = "<group>"; };
+		3B54CE1427401E53000DE31C /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3B54CDDD273EFA7D000DE31C /* CG+Convenience.swift */,
 				3B54CDDB273EF9E3000DE31C /* GameShape.swift */,
+				3B54CE1427401E53000DE31C /* Point.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				3B54CDDE273EFA7D000DE31C /* CG+Convenience.swift in Sources */,
 				3B54CDD8273EF8E8000DE31C /* GameView.swift in Sources */,
 				3B54CDDC273EF9E3000DE31C /* GameShape.swift in Sources */,
+				3B54CE1527401E53000DE31C /* Point.swift in Sources */,
 				3B54CDDA273EF93C000DE31C /* BackgroundView.swift in Sources */,
 				3B54CDD6273EF8C1000DE31C /* GameManager.swift in Sources */,
 			);

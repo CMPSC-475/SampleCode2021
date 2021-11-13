@@ -18,7 +18,7 @@ struct BackgroundView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Button(action: {self.manager.removeAll()})
+                    Button(action: {/*TODO: Action*/)})
                     {Image(systemName:"trash.fill")}
                     Spacer()
                 }
