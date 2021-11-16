@@ -10,8 +10,18 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var manager : GameManager
     var body: some View {
-        
+        ZStack {
         BackgroundView()
+        
+        ForEach(manager.shapes) {shape in
+            RectangleView(shape:shape)
+        }
+        
+        if let shape = manager.inProgressShape {
+            Outlilne(shape:shape)
+        }
+        }
+        
     }
 }
 

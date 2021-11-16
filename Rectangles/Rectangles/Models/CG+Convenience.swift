@@ -8,6 +8,7 @@
 import Foundation
 import CoreGraphics
 
+//conversion between CGPoint and Point
 extension CGPoint {
     var point : Point {Point(x: self.x, y: self.y)}
     init(p:Point) {

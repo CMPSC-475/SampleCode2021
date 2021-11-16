@@ -7,22 +7,32 @@
 
 import SwiftUI
 
+enum DragState : Equatable {
+    case inactive
+    case dragging
+}
 struct BackgroundView: View {
     @EnvironmentObject var manager : GameManager
     
     var body: some View {
         ZStack {
-            Color.gray
             
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Button(action: {/*TODO: Action*/)})
-                    {Image(systemName:"trash.fill")}
-                    Spacer()
+            let dragGesture = DragGesture()
+                .onChanged { value in
+                    if manager.inProgressShape == nil {
+                        manager.newPiece(at: value.location)
+                    } else {
+                        manager.updatePiece(to: value.location)
+                    }
                 }
-            }
+                .onEnded { value in
+                    manager.addPiece()
+                }
+            
+            Color.gray
+                .gesture(dragGesture)
+            
+            BottomBar()
         }
     }
 }
