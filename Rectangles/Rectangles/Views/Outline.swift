@@ -7,21 +7,22 @@
 
 import SwiftUI
 
-struct Outlilne: View {
+struct Outline: View {
     var shape:GameShape
     @EnvironmentObject var manager : GameManager
     var body: some View {
         
         Rectangle()
             .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5]))
-            .position(x: shape.origin.x, y: shape.origin.y)
-            .frame(width: shape.width, height: shape.height)
-        
+            .frame(width: abs(shape.width), height: abs(shape.height))
+            .position(x: shape.center.x, y: shape.center.y)
+
+
     }
 }
 
-struct Outlilne_Previews: PreviewProvider {
+struct Outline_Previews: PreviewProvider {
     static var previews: some View {
-        Outlilne(shape:GameShape.standard)
+        Outline(shape:GameShape.standard)
     }
 }

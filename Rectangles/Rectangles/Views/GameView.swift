@@ -13,12 +13,12 @@ struct GameView: View {
         ZStack {
         BackgroundView()
         
-        ForEach(manager.shapes) {shape in
-            RectangleView(shape:shape)
+        ForEach($manager.shapes) {$shape in
+            RectangleView(shape:$shape)
         }
         
         if let shape = manager.inProgressShape {
-            Outlilne(shape:shape)
+            Outline(shape:shape)
         }
         }
         

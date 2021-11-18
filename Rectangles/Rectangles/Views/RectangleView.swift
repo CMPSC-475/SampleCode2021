@@ -9,23 +9,47 @@ import SwiftUI
 
 struct RectangleView: View {
     @EnvironmentObject var manager : GameManager
-    var shape : GameShape
+    @Binding var shape : GameShape
+    @State var offset = CGSize.zero
+    var color : Color {Color(red: shape.colorRGB.0, green: shape.colorRGB.1, blue: shape.colorRGB.2)}
+    
     var body: some View {
+        
+        let longPress = LongPressGesture(minimumDuration: 0.01)
+            .onChanged { v in
+                shape.zIndex = manager.nextZIndex()
+            }
+        let dragGesture = DragGesture()
+            .onChanged { value in
+              
+                offset = value.translation
+            }
+            .onEnded { value in
+                shape.center.offsetBy(width: offset.width, height: offset.height)
+                offset = CGSize.zero
+                withAnimation {
+                  manager.removeIfEaten(shape)
+                }
+            }
+        let moveGesture = SimultaneousGesture(longPress, dragGesture)
         Rectangle()
-            .position(x: shape.origin.x, y: shape.origin.y)
+            .foregroundColor(color)
+    
             .frame(width: shape.width, height: shape.height)
-            .foregroundColor(colorFromRGB(shape: shape))
+            .position(x: shape.center.x, y: shape.center.y)
+            .offset(offset)
+            .gesture(moveGesture)
+            .zIndex(shape.zIndex)
     }
     
     func colorFromRGB(shape:GameShape) -> Color {
         let (red,green,blue) = shape.colorRGB
         return Color(red: red, green: green, blue: blue)
-        
     }
 }
 
-struct RectangleView_Previews: PreviewProvider {
-    static var previews: some View {
-        RectangleView(shape:GameShape.standard)
-    }
-}
+//struct RectangleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RectangleView(shape:GameShape.standard)
+//    }
+//}

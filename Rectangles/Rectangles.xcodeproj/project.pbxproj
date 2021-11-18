@@ -18,7 +18,7 @@
 		3B54CE1527401E53000DE31C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54CE1427401E53000DE31C /* Point.swift */; };
 		3BA88D112743ED7400892253 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88D102743ED7400892253 /* BottomBar.swift */; };
 		3BDB53BA274429E000354C9D /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53B9274429E000354C9D /* RectangleView.swift */; };
-		3BDB53BC27442B7000354C9D /* Outlilne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53BB27442B7000354C9D /* Outlilne.swift */; };
+		3BDB53BC27442B7000354C9D /* Outline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53BB27442B7000354C9D /* Outline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		3B54CE1427401E53000DE31C /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		3BA88D102743ED7400892253 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		3BDB53B9274429E000354C9D /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
-		3BDB53BB27442B7000354C9D /* Outlilne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outlilne.swift; sourceTree = "<group>"; };
+		3BDB53BB27442B7000354C9D /* Outline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			children = (
 				3B54CDD7273EF8E8000DE31C /* GameView.swift */,
 				3BDB53B9274429E000354C9D /* RectangleView.swift */,
-				3BDB53BB27442B7000354C9D /* Outlilne.swift */,
+				3BDB53BB27442B7000354C9D /* Outline.swift */,
 				3B54CDD9273EF93C000DE31C /* BackgroundView.swift */,
 				3BA88D102743ED7400892253 /* BottomBar.swift */,
 			);
@@ -194,7 +194,7 @@
 				3B54CE1527401E53000DE31C /* Point.swift in Sources */,
 				3B54CDDA273EF93C000DE31C /* BackgroundView.swift in Sources */,
 				3B54CDD6273EF8C1000DE31C /* GameManager.swift in Sources */,
-				3BDB53BC27442B7000354C9D /* Outlilne.swift in Sources */,
+				3BDB53BC27442B7000354C9D /* Outline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
