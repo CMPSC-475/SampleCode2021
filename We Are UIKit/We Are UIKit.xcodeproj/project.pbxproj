@@ -7,33 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BDB53D02756944B00354C9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53CF2756944B00354C9D /* AppDelegate.swift */; };
-		3BDB53D22756944B00354C9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53D12756944B00354C9D /* SceneDelegate.swift */; };
-		3BDB53D42756944B00354C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53D32756944B00354C9D /* ViewController.swift */; };
-		3BDB53D72756944B00354C9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB53D52756944B00354C9D /* Main.storyboard */; };
-		3BDB53D92756944E00354C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB53D82756944E00354C9D /* Assets.xcassets */; };
-		3BDB53DC2756944E00354C9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB53DA2756944E00354C9D /* LaunchScreen.storyboard */; };
-		3BDB53E42756960400354C9D /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53E32756960400354C9D /* UIColor+Random.swift */; };
-		3BDB53E62756B0C200354C9D /* CG+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53E52756B0C200354C9D /* CG+Convenience.swift */; };
-		3BDB53E8275937CD00354C9D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53E7275937CD00354C9D /* GameViewController.swift */; };
+		3BDB53F627593EA800354C9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53F527593EA800354C9D /* AppDelegate.swift */; };
+		3BDB53F827593EA800354C9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53F727593EA800354C9D /* SceneDelegate.swift */; };
+		3BDB53FA27593EA800354C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB53F927593EA800354C9D /* ViewController.swift */; };
+		3BDB53FD27593EA800354C9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB53FB27593EA800354C9D /* Main.storyboard */; };
+		3BDB53FF27593EAB00354C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB53FE27593EAB00354C9D /* Assets.xcassets */; };
+		3BDB540227593EAB00354C9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB540027593EAB00354C9D /* LaunchScreen.storyboard */; };
+		3BDB540A27593ECE00354C9D /* CheerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB540927593ECE00354C9D /* CheerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3BDB53CC2756944B00354C9D /* UIKit Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BDB53CF2756944B00354C9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BDB53D12756944B00354C9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BDB53D32756944B00354C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3BDB53D62756944B00354C9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3BDB53D82756944E00354C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3BDB53DB2756944E00354C9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3BDB53DD2756944E00354C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BDB53E32756960400354C9D /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
-		3BDB53E52756B0C200354C9D /* CG+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG+Convenience.swift"; sourceTree = "<group>"; };
-		3BDB53E7275937CD00354C9D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3BDB53F227593EA800354C9D /* We Are UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "We Are UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDB53F527593EA800354C9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BDB53F727593EA800354C9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3BDB53F927593EA800354C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BDB53FC27593EA800354C9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BDB53FE27593EAB00354C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BDB540127593EAB00354C9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BDB540327593EAB00354C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDB540927593ECE00354C9D /* CheerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3BDB53C92756944B00354C9D /* Frameworks */ = {
+		3BDB53EF27593EA800354C9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,75 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3BDB53C32756944B00354C9D = {
+		3BDB53E927593EA800354C9D = {
 			isa = PBXGroup;
 			children = (
-				3BDB53CE2756944B00354C9D /* UIKit Examples */,
-				3BDB53CD2756944B00354C9D /* Products */,
+				3BDB53F427593EA800354C9D /* We Are UIKit */,
+				3BDB53F327593EA800354C9D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3BDB53CD2756944B00354C9D /* Products */ = {
+		3BDB53F327593EA800354C9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BDB53CC2756944B00354C9D /* UIKit Examples.app */,
+				3BDB53F227593EA800354C9D /* We Are UIKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3BDB53CE2756944B00354C9D /* UIKit Examples */ = {
+		3BDB53F427593EA800354C9D /* We Are UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				3BDB53CF2756944B00354C9D /* AppDelegate.swift */,
-				3BDB53D12756944B00354C9D /* SceneDelegate.swift */,
-				3BDB53E32756960400354C9D /* UIColor+Random.swift */,
-				3BDB53D32756944B00354C9D /* ViewController.swift */,
-				3BDB53D52756944B00354C9D /* Main.storyboard */,
-				3BDB53E7275937CD00354C9D /* GameViewController.swift */,
-				3BDB53E52756B0C200354C9D /* CG+Convenience.swift */,
-				3BDB53D82756944E00354C9D /* Assets.xcassets */,
-				3BDB53DA2756944E00354C9D /* LaunchScreen.storyboard */,
-				3BDB53DD2756944E00354C9D /* Info.plist */,
+				3BDB53F527593EA800354C9D /* AppDelegate.swift */,
+				3BDB540927593ECE00354C9D /* CheerModel.swift */,
+				3BDB53F727593EA800354C9D /* SceneDelegate.swift */,
+				3BDB53F927593EA800354C9D /* ViewController.swift */,
+				3BDB53FB27593EA800354C9D /* Main.storyboard */,
+				3BDB53FE27593EAB00354C9D /* Assets.xcassets */,
+				3BDB540027593EAB00354C9D /* LaunchScreen.storyboard */,
+				3BDB540327593EAB00354C9D /* Info.plist */,
 			);
-			path = "UIKit Examples";
+			path = "We Are UIKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3BDB53CB2756944B00354C9D /* UIKit Examples */ = {
+		3BDB53F127593EA800354C9D /* We Are UIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BDB53E02756944E00354C9D /* Build configuration list for PBXNativeTarget "UIKit Examples" */;
+			buildConfigurationList = 3BDB540627593EAB00354C9D /* Build configuration list for PBXNativeTarget "We Are UIKit" */;
 			buildPhases = (
-				3BDB53C82756944B00354C9D /* Sources */,
-				3BDB53C92756944B00354C9D /* Frameworks */,
-				3BDB53CA2756944B00354C9D /* Resources */,
+				3BDB53EE27593EA800354C9D /* Sources */,
+				3BDB53EF27593EA800354C9D /* Frameworks */,
+				3BDB53F027593EA800354C9D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UIKit Examples";
-			productName = "UIKit Examples";
-			productReference = 3BDB53CC2756944B00354C9D /* UIKit Examples.app */;
+			name = "We Are UIKit";
+			productName = "We Are UIKit";
+			productReference = 3BDB53F227593EA800354C9D /* We Are UIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3BDB53C42756944B00354C9D /* Project object */ = {
+		3BDB53EA27593EA800354C9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					3BDB53CB2756944B00354C9D = {
+					3BDB53F127593EA800354C9D = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 3BDB53C72756944B00354C9D /* Build configuration list for PBXProject "UIKit Examples" */;
+			buildConfigurationList = 3BDB53ED27593EA800354C9D /* Build configuration list for PBXProject "We Are UIKit" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,58 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 3BDB53C32756944B00354C9D;
-			productRefGroup = 3BDB53CD2756944B00354C9D /* Products */;
+			mainGroup = 3BDB53E927593EA800354C9D;
+			productRefGroup = 3BDB53F327593EA800354C9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3BDB53CB2756944B00354C9D /* UIKit Examples */,
+				3BDB53F127593EA800354C9D /* We Are UIKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3BDB53CA2756944B00354C9D /* Resources */ = {
+		3BDB53F027593EA800354C9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDB53DC2756944E00354C9D /* LaunchScreen.storyboard in Resources */,
-				3BDB53D92756944E00354C9D /* Assets.xcassets in Resources */,
-				3BDB53D72756944B00354C9D /* Main.storyboard in Resources */,
+				3BDB540227593EAB00354C9D /* LaunchScreen.storyboard in Resources */,
+				3BDB53FF27593EAB00354C9D /* Assets.xcassets in Resources */,
+				3BDB53FD27593EA800354C9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3BDB53C82756944B00354C9D /* Sources */ = {
+		3BDB53EE27593EA800354C9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDB53E42756960400354C9D /* UIColor+Random.swift in Sources */,
-				3BDB53E62756B0C200354C9D /* CG+Convenience.swift in Sources */,
-				3BDB53D42756944B00354C9D /* ViewController.swift in Sources */,
-				3BDB53D02756944B00354C9D /* AppDelegate.swift in Sources */,
-				3BDB53E8275937CD00354C9D /* GameViewController.swift in Sources */,
-				3BDB53D22756944B00354C9D /* SceneDelegate.swift in Sources */,
+				3BDB53FA27593EA800354C9D /* ViewController.swift in Sources */,
+				3BDB53F627593EA800354C9D /* AppDelegate.swift in Sources */,
+				3BDB53F827593EA800354C9D /* SceneDelegate.swift in Sources */,
+				3BDB540A27593ECE00354C9D /* CheerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3BDB53D52756944B00354C9D /* Main.storyboard */ = {
+		3BDB53FB27593EA800354C9D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3BDB53D62756944B00354C9D /* Base */,
+				3BDB53FC27593EA800354C9D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3BDB53DA2756944E00354C9D /* LaunchScreen.storyboard */ = {
+		3BDB540027593EAB00354C9D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3BDB53DB2756944E00354C9D /* Base */,
+				3BDB540127593EAB00354C9D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3BDB53DE2756944E00354C9D /* Debug */ = {
+		3BDB540427593EAB00354C9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		3BDB53DF2756944E00354C9D /* Release */ = {
+		3BDB540527593EAB00354C9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,7 +286,7 @@
 			};
 			name = Release;
 		};
-		3BDB53E12756944E00354C9D /* Debug */ = {
+		3BDB540727593EAB00354C9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -303,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QQAQWEZF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UIKit Examples/Info.plist";
+				INFOPLIST_FILE = "We Are UIKit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -314,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.UIKit-Examples";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.We-Are-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +314,7 @@
 			};
 			name = Debug;
 		};
-		3BDB53E22756944E00354C9D /* Release */ = {
+		3BDB540827593EAB00354C9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -331,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QQAQWEZF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UIKit Examples/Info.plist";
+				INFOPLIST_FILE = "We Are UIKit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.UIKit-Examples";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.We-Are-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3BDB53C72756944B00354C9D /* Build configuration list for PBXProject "UIKit Examples" */ = {
+		3BDB53ED27593EA800354C9D /* Build configuration list for PBXProject "We Are UIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BDB53DE2756944E00354C9D /* Debug */,
-				3BDB53DF2756944E00354C9D /* Release */,
+				3BDB540427593EAB00354C9D /* Debug */,
+				3BDB540527593EAB00354C9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BDB53E02756944E00354C9D /* Build configuration list for PBXNativeTarget "UIKit Examples" */ = {
+		3BDB540627593EAB00354C9D /* Build configuration list for PBXNativeTarget "We Are UIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BDB53E12756944E00354C9D /* Debug */,
-				3BDB53E22756944E00354C9D /* Release */,
+				3BDB540727593EAB00354C9D /* Debug */,
+				3BDB540827593EAB00354C9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3BDB53C42756944B00354C9D /* Project object */;
+	rootObject = 3BDB53EA27593EA800354C9D /* Project object */;
 }

@@ -34,9 +34,10 @@ class ViewController: UIViewController {
         addClearButton()
     }
     
+    
     func addGestures() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapTurkey(sender:)))
-        
+        let s : Selector = #selector(tapTurkey(sender:))
+        let tapGesture = UITapGestureRecognizer(target: self, action: s)
         self.view.addGestureRecognizer(tapGesture)
     }
     
@@ -78,12 +79,9 @@ class ViewController: UIViewController {
         turkeys.append(turkeyView)
     }
     
-    //var s : Selector =
-    
-    var origin : CGPoint!
-    
 
     
+    var origin : CGPoint!  
     @objc func moveTurkey(sender: UIPanGestureRecognizer) {
         let turkey = sender.view!
         let translation = sender.translation(in: self.view)
@@ -91,7 +89,7 @@ class ViewController: UIViewController {
         case .began:
             origin = turkey.center
         case .changed:
-            //uses CGPoint extension 
+            //uses CGPoint extension
             let newCenter = origin + translation
             //CGPoint(x: origin.x + translation.x, y: origin.y + translation.y)
             turkey.center = newCenter
