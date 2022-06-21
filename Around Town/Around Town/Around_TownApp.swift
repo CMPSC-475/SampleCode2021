@@ -12,7 +12,7 @@ struct Around_TownApp: App {
     @StateObject var manager = MapManager()
     var body: some Scene {
         WindowGroup {
-            MainView()
+            RootView()
                 .environmentObject(manager)
         }
     }

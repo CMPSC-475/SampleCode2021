@@ -18,7 +18,9 @@ struct MainView: View {
             DowntownMap()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    searchBarItem
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        SearchButton(selectedCategory: $manager.selectedCategory)
+                                        }
                     titleItem
                     diningItem
                 }
@@ -27,9 +29,9 @@ struct MainView: View {
     
     
     // some local variables
-    var searchBarItem = ToolbarItem(placement: .navigationBarTrailing) {
-                            SearchButton()
-                        }
+//    var searchBarItem = ToolbarItem(placement: .navigationBarTrailing) {
+//        SearchButton(selectedCategory: $manager.selectedCategory)
+//                        }
     var titleItem = ToolbarItem(placement: .principal) {
                             Text("Downtown")
                         }

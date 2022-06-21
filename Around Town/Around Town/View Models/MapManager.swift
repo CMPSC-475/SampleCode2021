@@ -19,6 +19,12 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var showsUserLocation = false
     @Published var pins : [Pin] = []
     
+    @Published var overlays : [MKOverlay] = []
+    @Published var annotations : [MKAnnotation] = []
+    
+    @Published var showConfirmation = false
+    @Published var showPlace : Place?
+    
     let locationManager : CLLocationManager
     
     var userTrackingMode :MKUserTrackingMode = .none
@@ -82,8 +88,11 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     @Published var places : [Place] = []
     
-    func imageNameFor(category : Category) -> String {
-        category.rawValue.capitalized
+    func imageNameFor(category : Category?) -> String {
+        if let category = category {
+            return category.rawValue.capitalized
+        }
+        return "blue-pin"
     }
     
     func performSearch(on category:Category?) {

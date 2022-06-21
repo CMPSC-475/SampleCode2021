@@ -41,11 +41,11 @@ struct DowntownMap: View {
                                     presenting: place,
                                     actions: { thePlace in
                     VStack {
-                        Button("Directions to \(thePlace.title)") {manager.provideDirections(for: thePlace)}
+                        Button("Directions to \(thePlace.title ?? "??")") {manager.provideDirections(for: thePlace)}
                         Button("Delete", role: .destructive) {manager.delete(place: thePlace)}
                     }
                 }, message: { place in
-                    Text(place.title)
+                    Text(place.title ?? "No Name")
                     
                 })
             
