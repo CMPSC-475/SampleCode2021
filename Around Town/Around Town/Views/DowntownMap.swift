@@ -25,17 +25,7 @@ struct DowntownMap: View {
             NavigationLink(destination: SpotView(spot: $spot), isActive: $showDetails, label: {EmptyView()})
             
             Map(coordinateRegion: $manager.region, interactionModes: .all, showsUserLocation: manager.showsUserLocation, userTrackingMode: $userTrackingMode, annotationItems: manager.places , annotationContent: annotationFor(place:) )
-//            Map(coordinateRegion: $manager.region, annotationItems: manager.places, annotationContent: annotationFor(place:))
-            //            .actionSheet(item: $spot) { spot in
-            //                ActionSheet(title: Text(spot.title ?? "No Title"),
-            //                            message: Text(spot.subtitle ?? "No Subtitle"),
-            //                            buttons: [
-            //                                Alert.Button.default(Text("Directions"), action: {}),
-            //                                Alert.Button.destructive(Text("Delete"), action: {}),
-            //                                Alert.Button.cancel()])
-            //
-            //
-            //            }
+
                 .confirmationDialog("Title",
                                     isPresented: $showingPlace,
                                     presenting: place,

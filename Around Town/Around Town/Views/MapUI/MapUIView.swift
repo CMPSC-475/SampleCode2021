@@ -11,7 +11,7 @@ import MapKit
 struct MapUIView: View {
     @EnvironmentObject var manager : MapManager
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.7964685139719, longitude: -77.8628317618596) , span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+//    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.7964685139719, longitude: -77.8628317618596) , span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
     @State private var mapType: MKMapType = .standard
     @State private var annotations : [MKAnnotation] = []
@@ -22,17 +22,18 @@ struct MapUIView: View {
     //[MyPin(t: "here", loc: CLLocationCoordinate2D(latitude: 40.7964685139719, longitude: -77.8628317618596))]
     var body: some View {
         NavigationView {
-            ZStack {
-                MapViewUIKit(region: region, mapType: mapType, annotations: manager.annotations, overlays: manager.overlays, manager: manager)
+            //ZStack {
+            MapViewUIKit(region: manager.region, mapType: mapType, annotations: manager.annotations, overlays: manager.overlays, manager: manager)
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack {
-                    Spacer()
-                    MapPicker(mapType: $mapType)
-                }
-            }
+//                VStack {
+//                    Spacer()
+//                    MapPicker(mapType: $mapType)
+//                }
+            //}
             .confirmationDialog("Action", isPresented: $manager.showConfirmation, presenting: manager.showPlace, actions: { aPlace in
                 Button("Directions to \(aPlace.title ?? "??")") {manager.provideDirections(for: aPlace)}
+                Button("Delete", role: .destructive) {manager.delete(place: aPlace)}
             })
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -42,9 +43,9 @@ struct MapUIView: View {
                 ToolbarItem(placement: .principal) {
                                             Text("Downtown")
                                         }
-                    //ToolbarItem(placement: .navigationBarLeading) {
-                     //   DiningMenu()
-                    //}
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        DiningMenu()
+                    }
             }
         }
     }

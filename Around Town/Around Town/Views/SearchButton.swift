@@ -11,15 +11,25 @@ struct SearchButton: View {
     @Binding var selectedCategory : Category?
     //@EnvironmentObject var manager : MapManager
     var body: some View {
-        Picker(selection: $selectedCategory, label: Image(systemName: "magnifyingglass")) {
-            Text("None").tag(nil as Category?)
+        Menu {
             ForEach(Category.allCases, id:\.self) { category in
- 
-                Text(category.rawValue.capitalized).tag(category as Category?)
+                Button(category.rawValue.capitalized) {
+                    selectedCategory = category
+                }
+            } } label: {
+                Image(systemName: "magnifyingglass")
             }
-        }
-        
     }
+    
+    //        Picker(selection: $selectedCategory, label: Image(systemName: "magnifyingglass")) {
+    //            Text("None").tag(nil as Category?)
+    //            ForEach(Category.allCases, id:\.self) { category in
+    //
+    //                Text(category.rawValue.capitalized).tag(category as Category?)
+    //            }
+    //        }
+    
+    
 }
 
 struct SearchButton_Previews: PreviewProvider {

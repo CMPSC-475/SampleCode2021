@@ -77,6 +77,9 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
             self.places.removeAll()
             self.places = [place]
             self.region.center = mapMark.coordinate
+            
+            self.annotations.removeAll()
+            self.annotations.append(place)
         }
     }
     
@@ -97,6 +100,7 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func performSearch(on category:Category?) {
         places = []
+        annotations.removeAll()
         
         guard let category = category else {return}
         
@@ -111,6 +115,7 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
             for item in mapItems {
                 let place = Place(mapItem: item, category: category)
                 self.places.append(place)
+                self.annotations.append(place)
             }
         }
     }
@@ -119,15 +124,16 @@ class MapManager : NSObject, ObservableObject, CLLocationManagerDelegate {
         let request = MKDirections.Request()
         request.source = MKMapItem.forCurrentLocation()
         request.destination = MKMapItem(placemark: place.placeMark)
-        request.transportType = .walking
+        request.transportType = .automobile
         request.requestsAlternateRoutes = true
         let directions = MKDirections(request: request)
         
         directions.calculate { response, error in
             guard (error == nil) else {return}
             
-            let route = response!.routes.first
-            
+            if let route = response!.routes.first {
+                self.overlays.append(route.polyline)
+            }
         }
         
     }

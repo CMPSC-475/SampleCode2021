@@ -23,27 +23,26 @@ struct MapViewUIKit: UIViewRepresentable {
     // 2.
     func makeUIView(context: Context) -> MKMapView {
         //mapView = MKMapView()
-        mapView.setRegion(region, animated: false)
+        //mapView.setRegion(region, animated: false)
         mapView.mapType = mapType
         mapView.delegate = context.coordinator
         mapView.showsUserLocation = manager.showsUserLocation
         
         let longPress = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(MapViewCoordinator.dropPin(recognizer:)))
         mapView.addGestureRecognizer(longPress)
-        
         mapView.showsUserLocation = true
+    
         return mapView
     }
     
     // 3.
     func updateUIView(_ mapView: MKMapView, context: Context) {
         mapView.mapType = mapType
+        mapView.setRegion(region, animated: true)
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotations(annotations)
-//        for a in annotations {
-//            mapView.addAnnotation(a)
-//        }
         
+        mapView.removeOverlays(overlays)
         mapView.addOverlays(overlays)
         
         print("Annotation Count: \(annotations.count)")
